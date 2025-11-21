@@ -36,7 +36,7 @@ Ouranos Agentic Library is a comprehensive collection of **dialogue-based prompt
 - 🧠 **Knowledge Integration / 専門知識統合**: Leverage domain-specific theories and frameworks / 各分野の理論・フレームワークを活用
 - 📝 **Structured Templates / 構造化テンプレート**: Consistent, reusable format / 一貫したフォーマットで再利用可能
 - 🔍 **Diverse Categories / 多様なカテゴリ**: Wide coverage from business to education / ビジネスから教育まで幅広い領域をカバー
-- 📚 **44 Prompts / 44プロンプト**: Comprehensive coverage across 11 categories / 11カテゴリを網羅
+- 📚 **54 Prompts / 54プロンプト**: Comprehensive coverage across 11 categories / 11カテゴリを網羅
 
 ### Microsoft Copilot Edition
 
@@ -50,8 +50,8 @@ Ouranos Agentic Library is a comprehensive collection of **dialogue-based prompt
 ## 📊 Quick Comparison / バージョン比較
 
 | Feature | English/Japanese | Copilot Edition |
-|---------|-----------------|-----------------|
-| **Prompts** | 44 full prompts | 44 optimized prompts |
+|---------|-----------------|------------------|
+| **Prompts** | 54 full prompts | 54 optimized prompts |
 | **Characters** | 10k-15k per prompt | ≤8000 per prompt |
 | **Frameworks** | 4-8 per prompt | 2-3 per prompt |
 | **Examples** | Multiple detailed | 1-2 concise |
@@ -72,10 +72,10 @@ ouranos-agentic-library/
 ├── en/                       # English Version / 英語版
 │   ├── README.md
 │   ├── manifest.yml
-│   ├── prompts/              # 51 full prompts in English
+│   ├── prompts/              # 54 full prompts in English
 │   │   ├── general/ (1)
 │   │   ├── business-management/ (15)
-│   │   ├── design-development/ (8)
+│   │   ├── design-development/ (16)
 │   │   ├── hr-organization/ (5)
 │   │   ├── education/ (4)
 │   │   ├── research/ (3)
@@ -149,10 +149,10 @@ See [Copilot README](copilot/README.md) for details.
 All versions include 44 prompts across 11 categories:
 
 | Category | EN/JA Prompts | Copilot Prompts |
-|----------|---------------|-----------------||
+|----------|---------------|-----------------|
 | General / 汎用 | 1 | 1 (optimized) |
-| Business & Management / ビジネス・経営 | 10 | 10 (optimized) |
-| Design & Development / デザイン・開発 | 8 | 8 (optimized) |
+| Business & Management / ビジネス・経営 | 15 | 15 (optimized) |
+| Design & Development / デザイン・開発 | 16 | 16 (optimized) |
 | HR & Organization / 人材・組織 | 5 | 5 (optimized) |
 | Education / 教育 | 4 | 4 (optimized) |
 | Research / 研究 | 3 | 3 (optimized) |
@@ -161,7 +161,7 @@ All versions include 44 prompts across 11 categories:
 | Communication / コミュニケーション | 3 | 3 (optimized) |
 | Innovation & Transformation / イノベーション・変革 | 3 | 3 (optimized) |
 | Specialized Domains / 専門領域 | 3 | 3 (optimized) |
-| **Total / 合計** | **46** | **46** |
+| **Total / 合計** | **54** | **54** |
 
 ---
 
@@ -230,15 +230,15 @@ For questions or suggestions / 質問や提案がある場合:
 ## 🌟 Status / ステータス
 
 | Version | Status | Progress |
-|---------|--------|----------|
-| **English (en/)** | ✅ Complete | 46/46 prompts (100%) |
-| **Japanese (ja/)** | 🔄 In Progress | 1/44 prompts (2.3%) |
-| **Copilot (copilot/)** | 📋 Planned | 0/46 prompts (0%) |
+|---------|--------|-----------|
+| **English (en/)** | ✅ Complete | 54/54 prompts (100%) |
+| **Japanese (ja/)** | 🔄 In Progress | 1/54 prompts (1.9%) |
+| **Copilot (copilot/)** | 📋 Planned | 0/54 prompts (0%) |
 
-**Overall Progress**: 47/138 prompts (34.1%)
+**Overall Progress**: 55/162 prompts (34.0%)
 
 ---
 
-**Version**: 1.1.0  
+| **Version**: 1.1.0  
 **Last Updated**: 2025-11-21  
 **License**: CC BY-NC 4.0

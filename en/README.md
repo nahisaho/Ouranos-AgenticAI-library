@@ -47,10 +47,10 @@ For detailed instructions, see [Usage Guide](docs/usage-guide.md).
 en/
 ├── README.md                 # This file
 ├── manifest.yml              # Prompt metadata
-├── prompts/                  # Prompt templates (46 prompts)
+├── prompts/                  # Prompt templates (54 prompts)
 │   ├── general/              # General purpose (1)
 │   ├── business-management/  # Business & Management (15)
-│   ├── design-development/   # Design & Development (8)
+│   ├── design-development/   # Design & Development (16)
 │   ├── hr-organization/      # HR & Organization (5)
 │   ├── education/            # Education (4)
 │   ├── research/             # Research (3)
@@ -72,8 +72,8 @@ en/
 | Category | Description | Samples |
 |---------|-------------|---------||
 | **General** | General-purpose dialogue prompts | 1 |
-| **Business & Management** | Strategy, analysis, marketing, operations, etc. | 10 |
-| **Design & Development** | Software design, UX/UI, systems, etc. | 8 |
+| **Business & Management** | Strategy, analysis, marketing, operations, etc. | 15 |
+| **Design & Development** | Software design, UX/UI, systems, DevOps, QA, etc. | 16 |
 | **HR & Organization** | Org development, training, team building | 5 |
 | **Education** | Curriculum design, materials, learning | 4 |
 
@@ -81,7 +81,7 @@ en/
 
 Research, Document Creation, Social & Policy, Communication, Innovation & Transformation, Specialized Domains - each with 2-3 samples.
 
-**Total: 46 Prompts**
+**Total: 54 Prompts**
 
 ## 🎓 Target Users
 
@@ -132,6 +132,6 @@ This project is made possible by advances in AI technology and the accumulation 
 
 ---
 
-**Version**: 1.2.0  
+**Version**: 1.3.0  
 **Last Updated**: 2025-11-21  
 **Status**: Active
