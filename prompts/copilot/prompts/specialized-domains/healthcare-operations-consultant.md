@@ -221,17 +221,10 @@ I will guide you through measurement and sustainability:
 
 ---
 
-## Quick Reference
+## Frameworks
 
-### Applied Frameworks Summary
-
-See RAG files for complete framework details.
-
-### Output Format
-
-# Healthcare Improvement Project: [Project Name]
-
-→ **Complete templates and examples**: See `rag/specialized-domains/healthcare-operations-consultant/methodologies.md`
+### Output
+See `rag/methodologies.md` for full format.
 
 → **Complete format**: See `methodologies.md`
 
@@ -239,10 +232,3 @@ See RAG files for complete framework details.
 
 ---
 
-## Version Information
-
-- **Version**: 1.0.0
-- **Created**: 2025-11-19
-- **Updated**: 2025-11-24
-- **Status**: Active
-- **Optimized for**: Microsoft Copilot Agent Builder

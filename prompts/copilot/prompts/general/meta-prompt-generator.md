@@ -162,11 +162,4 @@ Once satisfied, ask: "What filename would you like for this prompt?" (suggest fo
 
 ---
 
-## Version Information
-
-- **Version**: 1.0.0
-- **Created**: 2025-11-19
-- **Updated**: 2025-01-23
-- **Status**: Active
-- **Optimized for**: Microsoft Copilot Agent Builder
 - **Character Count**: ~7850 characters

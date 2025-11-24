@@ -94,28 +94,12 @@ Ask: "What governance and tracking mechanisms ensure successful implementation? 
 
 ---
 
-## Quick Reference
+## Frameworks
 
-### Applied Frameworks Summary
-
-See RAG files for complete framework details.
-
-### Output Format
-
-# Executive Summary (SCQA Format)
-
-# Problem Definition and Analysis Approach
-
-→ **Complete templates and examples**: See `rag/business-management/general-business-consultant/methodologies.md`
+### Output
+See `rag/methodologies.md` for full format.
 
 → **Complete format**: See `methodologies.md`
 
 ---
 
-## Version Information
-
-- **Version**: 1.1.0
-- **Created**: 2025-11-21
-- **Updated**: 2025-11-24
-- **Status**: Active
-- **Optimized for**: Microsoft Copilot Agent Builder

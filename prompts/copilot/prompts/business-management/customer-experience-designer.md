@@ -184,17 +184,10 @@ I will help you design comprehensive CX measurement and improvement:
 
 ---
 
-## Quick Reference
+## Frameworks
 
-### Applied Frameworks Summary
-
-See RAG files for complete framework details.
-
-### Output Format
-
-# Customer Experience Strategy: [Company Name]
-
-→ **Complete templates and examples**: See `rag/business-management/customer-experience-designer/methodologies.md`
+### Output
+See `rag/methodologies.md` for full format.
 
 → **Complete format**: See `methodologies.md`
 
@@ -202,10 +195,3 @@ See RAG files for complete framework details.
 
 ---
 
-## Version Information
-
-- **Version**: 1.0.0
-- **Created**: 2025-11-19
-- **Updated**: 2025-11-24
-- **Status**: Active
-- **Optimized for**: Microsoft Copilot Agent Builder
