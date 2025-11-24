@@ -1,18 +1,17 @@
 # Project Structure
 
 **Project**: Ouranos-AgenticAI-library
-**Last Updated**: 2025-11-21
+**Last Updated**: 2025-11-23
 **Version**: 1.0
 
 ---
 
 ## Architecture Pattern
 
-**Primary Pattern**: Documentation-First Library Architecture
+**Primary Pattern**: {{ARCHITECTURE_PATTERN}}
 
-> This project uses a documentation-first approach for organizing prompt template libraries.
-> The architecture focuses on structured markdown-based templates with YAML metadata management,
-> supporting multi-language versions and optimized variants for different platforms.
+> [Description of the architecture pattern used in this project]
+> Examples: Monorepo with Library-First, Microservices, Modular Monolith, Serverless
 
 ---
 
@@ -22,152 +21,119 @@
 
 ```
 Ouranos-AgenticAI-library/
-├── en/                   # English version (complete)
-│   ├── prompts/          # 44 English prompt templates
-│   ├── docs/             # English documentation
-│   └── manifest.yml      # English version metadata
-├── ja/                   # Japanese version (in progress)
-│   ├── prompts/          # Japanese prompt templates
-│   ├── docs/             # Japanese documentation
-│   └── manifest.yml      # Japanese version metadata
-├── copilot/              # Microsoft Copilot optimized version (planned)
-│   ├── prompts/          # ≤8000 char optimized templates
-│   ├── docs/             # Copilot-specific documentation
-│   └── manifest.yml      # Copilot version metadata
-├── docs/                 # Shared documentation
-│   ├── language-guide.md # Multi-language support guide
-│   └── translation-guide.md # Translation guidelines
+├── lib/                  # Reusable libraries (Article I: Library-First)
+├── app/                  # Application code (Next.js, etc.)
+├── api/                  # API routes/controllers
+├── components/           # UI components
+├── services/             # Business logic services
+├── tests/                # Test suites
+├── docs/                 # Documentation
+├── storage/              # SDD artifacts
+│   ├── specs/            # Requirements, design, tasks
+│   ├── changes/          # Delta specifications (brownfield)
+│   └── validation/       # Validation reports
 ├── steering/             # Project memory (this directory)
 │   ├── structure.md      # This file
 │   ├── tech.md           # Technology stack
 │   ├── product.md        # Product context
 │   └── rules/            # Constitutional governance
-├── storage/              # SDD artifacts
-│   ├── changes/          # Delta specifications
-│   ├── features/         # Feature tracking
-│   └── specs/            # Requirements, design, tasks
-├── templates/            # Template structures
-├── References/           # Reference materials
-├── manifest.yml          # Root project metadata
-├── REQUIREMENTS.md       # Requirements document
-├── AGENTS.md             # MUSUBI SDD information
-└── README.md             # Main project documentation
+├── templates/            # Document templates
+└── [Other directories]
 ```
 
 ---
 
-## Template Library Pattern
+## Library-First Pattern (Article I)
 
-This project uses a template library pattern focused on prompt templates.
+All features begin as independent libraries in `lib/`.
 
-### Template Structure
+### Library Structure
 
-Each prompt template follows this structure:
+Each library follows this structure:
 
 ```
-{category}/{template-name}.md
----
-id: unique-identifier
-category: category-name
-frameworks:
-  - Framework 1
-  - Framework 2
-dialogue_stages: N
-version: 1.0.0
-tags:
-  - tag1
-  - tag2
-created: YYYY-MM-DD
-updated: YYYY-MM-DD
----
-
-# Template Title
-
-## 役割
-[Role definition]
-
-## 対話フロー
-[Dialogue flow stages]
-
-## 活用する専門知識・フレームワーク
-[Frameworks and knowledge]
-
-## 出力形式
-[Output format]
-
-## 使用例
-[Usage examples]
+lib/{{feature}}/
+├── src/
+│   ├── index.ts          # Public API exports
+│   ├── service.ts        # Business logic
+│   ├── repository.ts     # Data access
+│   ├── types.ts          # TypeScript types
+│   ├── errors.ts         # Custom errors
+│   └── validators.ts     # Input validation
+├── tests/
+│   ├── service.test.ts   # Unit tests
+│   ├── repository.test.ts # Integration tests (real DB)
+│   └── integration.test.ts # E2E tests
+├── cli.ts                # CLI interface (Article II)
+├── package.json          # Library metadata
+├── tsconfig.json         # TypeScript config
+└── README.md             # Library documentation
 ```
 
-### Template Guidelines
+### Library Guidelines
 
-- **Consistency**: All templates follow identical YAML frontmatter structure
-- **Multi-language**: Templates exist in multiple language versions (en, ja, copilot)
-- **Metadata**: YAML frontmatter provides comprehensive metadata
-- **Versioning**: Each template has version control
+- **Independence**: Libraries MUST NOT depend on application code
+- **Public API**: All exports via `src/index.ts`
+- **Testing**: Independent test suite
+- **CLI**: All libraries expose CLI interface (Article II)
 
 ---
 
-## Multi-Language Structure
+## Application Structure
 
-### Language Version Organization
+### Application Organization
 
 ```
-{lang}/
-├── README.md             # Language-specific README
-├── manifest.yml          # Language version metadata
-├── prompts/              # Prompt templates
-│   ├── general/
-│   ├── business-management/
-│   ├── design-development/
-│   ├── hr-organization/
-│   ├── education/
-│   ├── research/
-│   ├── document-creation/
-│   ├── social-policy/
-│   ├── communication/
-│   ├── innovation-transformation/
-│   └── specialized-domains/
-└── docs/                 # Language-specific documentation
-    ├── usage-guide.md
-    ├── contribution.md
-    └── framework-reference.md
+app/
+├── (auth)/               # Route groups (Next.js App Router)
+│   ├── login/
+│   │   └── page.tsx
+│   └── register/
+│       └── page.tsx
+├── dashboard/
+│   └── page.tsx
+├── api/                  # API routes
+│   ├── auth/
+│   │   └── route.ts
+│   └── users/
+│       └── route.ts
+├── layout.tsx            # Root layout
+└── page.tsx              # Home page
 ```
 
-### Language Version Guidelines
+### Application Guidelines
 
-- **Consistency**: All language versions follow identical directory structure
-- **Completeness**: Each language version aims for full template coverage
-- **Optimization**: Special versions (like copilot) may have character limits
-- **Documentation**: Each version includes complete documentation in target language
+- **Library Usage**: Applications import from `lib/` modules
+- **Thin Controllers**: API routes delegate to library services
+- **No Business Logic**: Business logic belongs in libraries
 
 ---
 
-## Category Organization
+## Component Organization
 
-### Prompt Categories
+### UI Components
 
 ```
-prompts/
-├── general/              # General purpose (1 template)
-├── business-management/  # Business & Management (10 templates)
-├── design-development/   # Design & Development (8 templates)
-├── hr-organization/      # HR & Organization (5 templates)
-├── education/            # Education (4 templates)
-├── research/             # Research (3 templates)
-├── document-creation/    # Document Creation (3 templates)
-├── social-policy/        # Social & Policy (3 templates)
-├── communication/        # Communication (3 templates)
-├── innovation-transformation/ # Innovation & Transformation (3 templates)
-└── specialized-domains/  # Specialized Domains (3 templates)
+components/
+├── ui/                   # Base UI components (shadcn/ui)
+│   ├── button.tsx
+│   ├── input.tsx
+│   └── card.tsx
+├── auth/                 # Feature-specific components
+│   ├── LoginForm.tsx
+│   └── RegisterForm.tsx
+├── dashboard/
+│   └── StatsCard.tsx
+└── shared/               # Shared components
+    ├── Header.tsx
+    └── Footer.tsx
 ```
 
-### Category Guidelines
+### Component Guidelines
 
-- **Focused Scope**: Each category covers specific professional domain
-- **Template Count**: Balanced distribution with higher priority for business/development
-- **Naming**: Consistent kebab-case directory names
-- **Coverage**: Categories cover wide range of professional domains
+- **Composition**: Prefer composition over props drilling
+- **Types**: All props typed with TypeScript
+- **Tests**: Component tests with React Testing Library
 
 ---
 
@@ -438,5 +404,5 @@ This structure enforces:
 
 ---
 
-**Last Updated**: 2025-11-21
+**Last Updated**: 2025-11-23
 **Maintained By**: {{MAINTAINER}}

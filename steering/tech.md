@@ -1,7 +1,7 @@
 # Technology Stack
 
 **Project**: Ouranos-AgenticAI-library
-**Last Updated**: 2025-11-21
+**Last Updated**: 2025-11-23
 **Version**: 1.0
 
 ---
@@ -18,43 +18,36 @@ This document defines the approved technology stack for Ouranos-AgenticAI-librar
 
 | Language             | Version        | Usage                        | Notes               |
 | -------------------- | -------------- | ---------------------------- | ------------------- |
-| Markdown             | CommonMark     | Template documentation       | Primary format      |
-| YAML                 | 1.2            | Metadata and configuration   | Frontmatter format  |
-| English              | -              | Primary language             | Full templates      |
-| Japanese             | -              | Secondary language           | Full templates      |
-| TypeScript           | 5.0+           | Type definitions (future)    | For tooling         |
+| {{PRIMARY_LANGUAGE}} | {{VERSION}}    | Primary application language | [Notes]             |
+| SQL                  | PostgreSQL 15+ | Database queries             | Via Prisma ORM      |
+| TypeScript           | 5.0+           | Type definitions             | Strict mode enabled |
 
 ### Runtime Environment
 
-- **Git**: Version control and project management
-- **Markdown Processors**: For viewing and processing templates
-- **YAML Processors**: For metadata management
-- **Text Editors**: VS Code, vim, emacs, etc.
-- **GitHub**: Repository hosting and collaboration
+- **Node.js**: {{NODE_VERSION}}+ (LTS)
+- **Package Manager**: npm {{NPM_VERSION}}+ / pnpm {{PNPM_VERSION}}+
 
 ---
 
-## Documentation Stack
+## Frontend Stack
 
-### Primary Format
+### Framework
 
-**Primary Format**: Markdown with YAML Frontmatter
+**Primary Framework**: {{FRONTEND_FRAMEWORK}}
 
-| Technology | Version     | Purpose                             |
-| ---------- | ----------- | ----------------------------------- |
-| Markdown   | CommonMark  | Template content and documentation  |
-| YAML       | 1.2         | Metadata and configuration          |
-| Git        | 2.0+        | Version control                     |
-| GitHub     | -           | Repository hosting                  |
+| Technology             | Version     | Purpose                             |
+| ---------------------- | ----------- | ----------------------------------- |
+| {{FRONTEND_FRAMEWORK}} | {{VERSION}} | [Purpose]                           |
+| React                  | 18+         | UI library (if using Next.js/Remix) |
+| TypeScript             | 5.0+        | Type safety                         |
 
-### Metadata Management
+### UI Components
 
-| Technology        | Version     | Purpose                       |
-| ----------------- | ----------- | ----------------------------- |
-| YAML Frontmatter | -           | Template metadata             |
-| manifest.yml      | -           | Project-level metadata        |
-| Git Tags          | -           | Version management            |
-| GitHub Releases   | -           | Distribution management       |
+| Library        | Version     | Purpose              |
+| -------------- | ----------- | -------------------- |
+| {{UI_LIBRARY}} | {{VERSION}} | Component library    |
+| Tailwind CSS   | 3.0+        | Utility-first CSS    |
+| shadcn/ui      | Latest      | Component primitives |
 
 ### State Management
 
@@ -73,18 +66,17 @@ This document defines the approved technology stack for Ouranos-AgenticAI-librar
 
 ---
 
-## Content Management Stack
+## Backend Stack
 
-### Template Organization
+### Framework
 
-**Primary Approach**: File-based Template Management
+**Primary Framework**: {{BACKEND_FRAMEWORK}}
 
 | Technology            | Version     | Purpose                           |
 | --------------------- | ----------- | --------------------------------- |
-| File System           | -           | Template storage and organization |
-| YAML Frontmatter      | 1.2         | Template metadata                 |
-| Markdown              | CommonMark  | Template content format           |
-| Directory Structure   | -           | Category-based organization       |
+| {{BACKEND_FRAMEWORK}} | {{VERSION}} | API server                        |
+| Express               | 4.0+        | Web framework (if using Node.js)  |
+| Next.js API Routes    | 14+         | Serverless API (if using Next.js) |
 
 ### API Technologies
 
@@ -96,40 +88,44 @@ This document defines the approved technology stack for Ouranos-AgenticAI-librar
 
 ---
 
-## Template Storage Stack
+## Database Stack
 
-### Storage Approach
+### Primary Database
 
-**Storage**: File-based with Git Version Control
+**Database**: {{DATABASE}}
 
 | Technology   | Version     | Purpose            |
 | ------------ | ----------- | ------------------ |
-| File System  | -           | Template storage   |
-| Git          | 2.0+        | Version control    |
-| YAML         | 1.2         | Metadata format    |
-| Markdown     | CommonMark  | Content format     |
+| {{DATABASE}} | {{VERSION}} | Primary data store |
+| Prisma       | 5.0+        | ORM and migrations |
 
-### Template Schema
+### Database Schema
 
-```yaml
-# YAML Frontmatter structure
-id: string              # Unique identifier
-category: string        # Category classification
-frameworks: string[]    # List of frameworks/theories
-dialogue_stages: number # Number of dialogue stages
-version: string         # Semantic version
-tags: string[]          # Searchable tags
-created: date          # Creation date
-updated: date          # Last update date
+```prisma
+// Example schema structure
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
 ```
 
-### Multi-language Support
+### Caching Layer
 
-| Language      | Path       | Status       | Character Limit |
-| ------------- | ---------- | ------------ | --------------- |
-| English       | en/        | Complete     | 10k-15k chars   |
-| Japanese      | ja/        | In Progress  | 10k-15k chars   |
-| Copilot       | copilot/   | Planned      | ≤8000 chars     |
+| Technology      | Version | Purpose                  |
+| --------------- | ------- | ------------------------ |
+| Redis           | 7.0+    | Session storage, caching |
+| In-memory cache | -       | Development only         |
 
 ---
 
@@ -540,5 +536,5 @@ When evaluating new technologies:
 
 ---
 
-**Last Updated**: 2025-11-21
+**Last Updated**: 2025-11-23
 **Maintained By**: {{MAINTAINER}}

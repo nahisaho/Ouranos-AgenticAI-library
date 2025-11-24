@@ -47,18 +47,18 @@ For detailed instructions, see [Usage Guide](docs/usage-guide.md).
 en/
 ├── README.md                 # This file
 ├── manifest.yml              # Prompt metadata
-├── prompts/                  # Prompt templates (54 prompts)
+├── prompts/                  # Prompt templates (78 prompts)
 │   ├── general/              # General purpose (1)
-│   ├── business-management/  # Business & Management (15)
-│   ├── design-development/   # Design & Development (16)
-│   ├── hr-organization/      # HR & Organization (5)
-│   ├── education/            # Education (4)
-│   ├── research/             # Research (3)
+│   ├── business-management/  # Business & Management (12)
+│   ├── design-development/   # Design & Development (20)
+│   ├── hr-organization/      # HR & Organization (12)
+│   ├── education/            # Education (8)
+│   ├── research/             # Research (5)
 │   ├── document-creation/    # Document Creation (3)
-│   ├── social-policy/        # Social & Policy (3)
-│   ├── communication/        # Communication (3)
-│   ├── innovation-transformation/ # Innovation & Transformation (3)
-│   └── specialized-domains/  # Specialized Domains (3)
+│   ├── social-policy/        # Social & Policy (6)
+│   ├── communication/        # Communication (6)
+│   ├── innovation-transformation/ # Innovation & Transformation (5)
+│   └── specialized-domains/  # Specialized Domains (8)
 └── docs/                     # Additional documentation
     ├── usage-guide.md        # Usage guide
     ├── contribution.md       # Contribution guidelines
@@ -72,16 +72,17 @@ en/
 | Category | Description | Samples |
 |---------|-------------|---------||
 | **General** | General-purpose dialogue prompts | 1 |
-| **Business & Management** | Strategy, analysis, marketing, operations, etc. | 15 |
-| **Design & Development** | Software design, UX/UI, systems, DevOps, QA, etc. | 16 |
-| **HR & Organization** | Org development, training, team building | 5 |
-| **Education** | Curriculum design, materials, learning | 4 |
+| **Business & Management** | Strategy, analysis, marketing, data & analytics, sustainability & ESG, competitive intelligence | 12 |
+| **Design & Development** | Software design, UX/UI, systems, DevOps, QA, technology strategy, product management | 20 |
+| **HR & Organization** | Org development, training, compensation, team building, DEI, recruitment, L&D, engagement, workforce analytics | 12 |
+| **Education** | Curriculum design, materials, learning, special education | 8 |
+| **Innovation & Transformation** | Innovation, digital transformation, AI/ML, Agile/DevOps | 5 |
 
 ### Additional Categories
 
-Research, Document Creation, Social & Policy, Communication, Innovation & Transformation, Specialized Domains - each with 2-3 samples.
+Research (5), Document Creation (3), Social & Policy (6), Communication (6), Specialized Domains (8) - healthcare, legal, finance, cybersecurity, manufacturing, retail, financial services, ERP/CRM.
 
-**Total: 54 Prompts**
+**Total: 78 Prompts**
 
 ## 🎓 Target Users
 

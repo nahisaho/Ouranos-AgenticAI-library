@@ -1,20 +1,20 @@
 # Product Context
 
 **Project**: Ouranos-AgenticAI-library
-**Last Updated**: 2025-11-21
+**Last Updated**: 2025-11-23
 **Version**: 1.0
 
 ---
 
 ## Product Vision
 
-**Vision Statement**: Democratize access to expert-level dialogue-based prompt engineering through structured, reusable templates.
+**Vision Statement**: {{VISION_STATEMENT}}
 
-> This product aims to bridge the gap between AI capabilities and effective prompt engineering by providing comprehensive, expert-crafted template libraries that enable users to generate sophisticated meta-prompts through guided dialogue. It empowers professionals across diverse domains to leverage AI effectively without requiring deep prompt engineering expertise.
+> [1-2 paragraph description of what this product aims to achieve and why it exists]
 
-**Mission**: Enable any professional to create effective AI dialogues that clarify objectives and generate domain-specific meta-prompts using proven frameworks and methodologies.
+**Mission**: {{MISSION_STATEMENT}}
 
-> We achieve this vision by providing structured, dialogue-based prompt templates that incorporate domain expertise, proven frameworks, and clear conversation flows, making advanced AI interactions accessible to professionals in business, design, education, research, and other specialized fields.
+> [How the product achieves its vision]
 
 ---
 
@@ -22,23 +22,21 @@
 
 ### What is Ouranos-AgenticAI-library?
 
-A comprehensive collection of dialogue-based prompt templates that enable AI to clarify user objectives through structured conversation and generate meta-prompts using domain expertise and frameworks.
+A software project using MUSUBI SDD
 
-> Ouranos Agentic Library is a curated collection of 44+ professional-grade prompt templates spanning 11 categories from general business consulting to specialized domains. Each template incorporates proven frameworks, structured dialogue flows, and expert knowledge to guide users through effective AI conversations that clarify objectives and generate customized meta-prompts.
-
-> The library supports multiple formats: full-featured versions in English and Japanese (10k-15k characters each), and an optimized Microsoft Copilot edition (≤8000 characters) designed for platform constraints. All templates follow a consistent YAML frontmatter structure enabling systematic metadata management and easy integration into various workflows.
+> [2-3 paragraphs explaining the product, its purpose, and core value proposition]
 
 ### Problem Statement
 
-**Problem**: Professionals struggle to effectively leverage AI capabilities due to poor prompt engineering skills and lack of domain-specific guidance for creating effective AI dialogues.
+**Problem**: {{PROBLEM_STATEMENT}}
 
-> Many users approach AI with vague requests or poorly structured prompts, leading to generic, unhelpful responses. They lack knowledge of proven frameworks, domain-specific methodologies, and effective dialogue patterns that could unlock AI's full potential for their specific professional needs.
+> [What problem does this product solve? What pain points does it address?]
 
 ### Solution
 
-**Solution**: Provide professionally-crafted, dialogue-based prompt templates that incorporate domain expertise and proven frameworks to guide users through effective AI conversations.
+**Solution**: {{SOLUTION_STATEMENT}}
 
-> Our solution offers structured templates that transform AI interactions from one-shot prompts into guided conversations. Each template includes role definitions, multi-stage dialogue flows, domain-specific frameworks, and clear output formats, enabling users to generate sophisticated meta-prompts tailored to their specific objectives and context.
+> [How does this product solve the problem? What makes it unique?]
 
 ---
 
@@ -101,9 +99,8 @@ A comprehensive collection of dialogue-based prompt templates that enable AI to 
 
 ### Secondary Users
 
-- **Educators and Trainers**: University professors, corporate trainers, and instructional designers who need structured approaches to AI-assisted curriculum development and learning material creation
-- **Researchers and Analysts**: Academic researchers, market researchers, and policy analysts who require systematic frameworks for AI-assisted research methodology and data analysis
-- **Content Creators and Writers**: Technical writers, proposal writers, and documentation specialists who need consistent templates for AI-assisted content generation and document structuring
+- **{{SECONDARY_USER_1}}**: [Description and role]
+- **{{SECONDARY_USER_2}}**: [Description and role]
 
 ---
 
@@ -571,5 +568,5 @@ Key concepts and terminology used in this domain:
 
 ---
 
-**Last Updated**: 2025-11-21
+**Last Updated**: 2025-11-23
 **Maintained By**: {{MAINTAINER}}
