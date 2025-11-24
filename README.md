@@ -16,7 +16,7 @@ This library is available in multiple versions to suit your needs:
 
 ### 🤖 Optimized Version
 
-- **[Microsoft Copilot Agent Edition](copilot/README.md)** - Optimized for Copilot (≤8000 chars each)
+- **[Microsoft Copilot Agent Edition](copilot/README.md)** - Optimized for Copilot (≤16K chars + RAG files) ✅ **COMPLETE**
 
 ---
 
@@ -36,14 +36,15 @@ Ouranos Agentic Library is a comprehensive collection of **dialogue-based prompt
 - 🧠 **Knowledge Integration / 専門知識統合**: Leverage domain-specific theories and frameworks / 各分野の理論・フレームワークを活用
 - 📝 **Structured Templates / 構造化テンプレート**: Consistent, reusable format / 一貫したフォーマットで再利用可能
 - 🔍 **Diverse Categories / 多様なカテゴリ**: Wide coverage from business to education / ビジネスから教育まで幅広い領域をカバー
-- 📚 **54 Prompts / 54プロンプト**: Comprehensive coverage across 11 categories / 11カテゴリを網羅
+- 📚 **93 Prompts / 93プロンプト**: Comprehensive coverage across 11 categories / 11カテゴリを網羅
 
 ### Microsoft Copilot Edition
 
-- 📏 **Character Optimized**: All prompts ≤ 8000 characters
-- 🤖 **Copilot Ready**: Designed for Microsoft Copilot Agent constraints
-- ⚡ **Fast Loading**: Condensed content for quick processing
-- 🎯 **Core Content**: Essential frameworks and dialogue structure preserved
+- 📏 **Character Optimized**: 91/93 prompts ≤16,000 characters (97.8% compliance)
+- 🤖 **Copilot Ready**: Designed for Microsoft Copilot Agent Builder
+- ⚡ **RAG Support**: 279 RAG files for detailed frameworks, examples, and methodologies
+- 🎯 **Core Content**: Essential dialogue structure + unlimited RAG knowledge base
+- ✅ **Complete**: 93 prompts fully converted and production-ready
 
 ---
 

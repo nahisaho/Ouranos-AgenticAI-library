@@ -1,0 +1,75 @@
+version: '3.8'
+
+services:
+  # SurrealDB Database
+  surrealdb:
+    image: surrealdb/surrealdb:latest
+    container_name: ouranos-db
+    ports:
+      - "8001:8000"
+    command: start --user root --pass root file:/mydata
+    volumes:
+      - surrealdb-data:/mydata
+    networks:
+      - ouranos-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # FastAPI Backend
+  api:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.api
+    container_name: ouranos-api
+    ports:
+      - "8000:8000"
+    environment:
+      - SURREAL_URL=ws://surrealdb:8000/rpc
+      - SURREAL_USER=root
+      - SURREAL_PASS=root
+      - PROMPTS_DIR=/app/prompts
+      - DEBUG=true
+      - API_RELOAD=true
+    env_file:
+      - .env
+    volumes:
+      - ./api:/app/api
+      - ./prompts:/app/prompts
+      - ./scripts:/app/scripts
+    depends_on:
+      surrealdb:
+        condition: service_healthy
+    networks:
+      - ouranos-network
+    command: uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload
+
+  # Next.js Frontend
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.frontend
+    container_name: ouranos-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+      - NODE_ENV=development
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+      - /app/.next
+    depends_on:
+      - api
+    networks:
+      - ouranos-network
+    command: npm run dev
+
+networks:
+  ouranos-network:
+    driver: bridge
+
+volumes:
+  surrealdb-data:

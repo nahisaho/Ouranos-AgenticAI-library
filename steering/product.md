@@ -28,15 +28,23 @@ A software project using MUSUBI SDD
 
 ### Problem Statement
 
-**Problem**: {{PROBLEM_STATEMENT}}
+**Problem**: Professionals struggle to create effective AI prompts that leverage domain expertise and structured methodologies
 
-> [What problem does this product solve? What pain points does it address?]
+> Most AI users rely on generic, one-shot prompts that fail to elicit expert-level guidance. Creating sophisticated prompts requires deep knowledge of both AI prompting techniques AND domain-specific frameworks (e.g., business strategy models, instructional design theories, software architecture patterns). This knowledge gap prevents users from fully leveraging AI capabilities in their professional work.
+>
+> Additionally, existing prompt libraries are either too generic (lacking domain depth) or too rigid (not adaptable to specific contexts). Users need a structured way to clarify their objectives through dialogue before receiving tailored meta-prompts.
 
 ### Solution
 
-**Solution**: {{SOLUTION_STATEMENT}}
+**Solution**: Dialogue-based prompt templates embedding expert frameworks across 11 professional domains
 
-> [How does this product solve the problem? What makes it unique?]
+> Ouranos Agentic Library solves this by providing 78 specialized prompt templates, each designed as a multi-stage dialogue agent that:
+>
+> 1. **Clarifies user objectives** through progressive questioning (Stages 1-2)
+> 2. **Applies domain frameworks** systematically (Stages 3-4: SWOT, ADDIE, Design Thinking, etc.)
+> 3. **Generates customized meta-prompts** based on gathered context (Stage 5)
+>
+> Unlike generic prompt collections, each template embeds 4-10 proven methodologies from the respective domain, ensuring AI responses are grounded in established best practices. The planned interactive platform will enable real-time dialogue sessions with AI agents, making expert-level prompting accessible to non-technical professionals.
 
 ---
 
@@ -44,63 +52,68 @@ A software project using MUSUBI SDD
 
 ### Primary Users
 
-#### User Persona 1: {{PERSONA_1_NAME}}
+#### User Persona 1: Business Strategy Consultant
 
 **Demographics**:
 
-- **Role**: {{ROLE}}
-- **Organization Size**: {{ORG_SIZE}}
-- **Technical Level**: {{TECH_LEVEL}}
+- **Role**: Management Consultant, Business Analyst, Strategic Planner
+- **Organization Size**: SME to Enterprise (50-10,000+ employees)
+- **Technical Level**: Intermediate (comfortable with AI tools, not developers)
 
 **Goals**:
 
-- [Goal 1]
-- [Goal 2]
-- [Goal 3]
+- Generate comprehensive business strategy frameworks using AI
+- Create client-facing reports with structured analysis
+- Apply proven methodologies (SWOT, Porter's 5 Forces) systematically
 
 **Pain Points**:
 
-- [Pain point 1]
-- [Pain point 2]
-- [Pain point 3]
+- Generic AI prompts lack depth in business frameworks
+- Difficulty translating client needs into effective prompts
+- Time-consuming to craft multi-stage analytical prompts
 
 **Use Cases**:
 
-- [Use case 1]
-- [Use case 2]
-- [Use case 3]
+- Use "Business Strategy Consultant" prompt for market analysis
+- Leverage "Competitive Intelligence" for client projects
+- Apply "Corporate Strategy" template for M&A due diligence
 
 ---
 
-#### User Persona 2: {{PERSONA_2_NAME}}
+#### User Persona 2: Software Developer / Tech Lead
 
 **Demographics**:
 
-- **Role**: {{ROLE}}
-- **Organization Size**: {{ORG_SIZE}}
-- **Technical Level**: {{TECH_LEVEL}}
+- **Role**: Software Engineer, Architect, Technical Lead
+- **Organization Size**: Startup to Enterprise
+- **Technical Level**: Advanced (developers, architects)
 
 **Goals**:
 
-- [Goal 1]
-- [Goal 2]
+- Generate system design documentation with AI
+- Create API specifications and architectural decision records
+- Get AI assistance for code reviews and refactoring
 
 **Pain Points**:
 
-- [Pain point 1]
-- [Pain point 2]
+- AI lacks context on software architecture patterns
+- Generic coding prompts miss quality attributes (scalability, security)
+- Need structured approach to design discussions
 
 **Use Cases**:
 
-- [Use case 1]
-- [Use case 2]
+- Use "Software Architect" for system design reviews
+- Apply "API Design Specialist" for RESTful API creation
+- Leverage "DevOps Engineer" for CI/CD pipeline design
 
 ---
 
 ### Secondary Users
 
-- **{{SECONDARY_USER_1}}**: [Description and role]
-- **{{SECONDARY_USER_2}}**: [Description and role]
+- **HR Professionals**: Organizational development consultants, talent managers, L&D specialists
+- **Educators & Researchers**: Curriculum designers, instructional designers, academic researchers
+- **Policy Makers & Social Workers**: Policy analysts, community engagement specialists
+- **Product Managers**: Digital product managers, innovation strategists
 
 ---
 

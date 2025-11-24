@@ -1,4 +1,3 @@
----
 project:
   name: Ouranos Agentic Library
   version: 1.0.0
@@ -7,1175 +6,1073 @@ project:
   repository: https://github.com/nahisaho/ouranos-agentic-library
   created: 2025-11-19
   updated: 2025-11-19
-
 languages:
-  - code: en
-    name: English
-    name_native: English
-    description: Full version in English
-    path: en/
-    character_limit: null
-    status: complete
-    prompts_completed: 78
-    prompts_total: 78
-    completion_percentage: 100
+- code: en
+  name: English
+  name_native: English
+  description: Full version in English
+  path: en/
+  character_limit: null
+  status: complete
+  prompts_completed: 93
+  prompts_total: 93
+  completion_percentage: 100
+- code: ja
+  name: Japanese
+  name_native: 日本語
+  description: 日本語フルバージョン
+  path: ja/
+  character_limit: null
+  status: in_progress
+  prompts_completed: 1
+  prompts_total: 93
+  completion_percentage: 1.1
+- code: copilot
+  name: Microsoft Copilot Agent
+  name_native: Microsoft Copilot Agent
+  description: Optimized for Microsoft Copilot with RAG support (≤16K char limit)
+  path: copilot/
+  character_limit: 16000
+  status: complete
+  prompts_completed: 93
+  prompts_total: 93
+  completion_percentage: 100
+  rag_files: 279
+  conversion_date: 2025-11-24
+  notes: '- 93 Copilot-optimized prompts (main dialogue files)
 
-  - code: ja
-    name: Japanese
-    name_native: 日本語
-    description: 日本語フルバージョン
-    path: ja/
-    character_limit: null
-    status: in_progress
-    prompts_completed: 1
-    prompts_total: 78
-    completion_percentage: 1.3
+    - 279 RAG support files (frameworks, examples, methodologies)
 
-  - code: copilot
-    name: Microsoft Copilot Agent
-    name_native: Microsoft Copilot Agent
-    description: Optimized for Microsoft Copilot (8000 char limit)
-    path: copilot/
-    character_limit: 8000
-    status: planned
-    prompts_completed: 0
-    prompts_total: 78
-    completion_percentage: 0
+    - 91/93 prompts ≤16K chars (97.8% compliance)
 
+    - 2 prompts require manual optimization (database-architect, ml-ai-engineer)
+
+    '
 categories:
-  - id: general
-    name:
-      en: General
-      ja: 汎用
-    description:
-      en: General-purpose dialogue prompt creation
-      ja: 汎用的な対話型プロンプト作成
-    target_samples: 1
-    priority: high
-    status:
-      en: complete
-      ja: complete
-      copilot: planned
-
-  - id: business-management
-    name:
-      en: Business & Management
-      ja: ビジネス・経営
-    description:
-      en: Strategy, analysis, marketing, etc.
-      ja: 戦略立案、経営分析、マーケティングなど
-    target_samples: 12
-    priority: high
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: design-development
-    name:
-      en: Design & Development
-      ja: デザイン・開発
-    description:
-      en: Software design, UX/UI, systems, etc.
-      ja: ソフトウェア設計、UX/UI、システム開発など
-    target_samples: 20
-    priority: high
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: hr-organization
-    name:
-      en: HR & Organization
-      ja: 人材・組織
-    description:
-      en: Org development, training, team building, etc.
-      ja: 組織開発、人材育成、チームビルディングなど
-    target_samples: 12
-    priority: high
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: education
-    name:
-      en: Education
-      ja: 教育
-    description:
-      en: Curriculum design, materials, learning support, etc.
-      ja: カリキュラム設計、教材作成、学習支援など
-    target_samples: 8
-    priority: high
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: research
-    name:
-      en: Research
-      ja: 研究
-    description:
-      en: Research planning, literature review, experiment design, etc.
-      ja: 研究計画、文献調査、実験設計など
-    target_samples: 5
-    priority: medium
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: document-creation
-    name:
-      en: Document Creation
-      ja: 文書作成
-    description:
-      en: Reports, proposals, technical documents, etc.
-      ja: レポート、提案書、技術文書など
-    target_samples: 3
-    priority: medium
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: social-policy
-    name:
-      en: Social & Policy
-      ja: 社会・政策
-    description:
-      en: Policy planning, social issue analysis, etc.
-      ja: 政策立案、社会課題分析など
-    target_samples: 6
-    priority: medium
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: communication
-    name:
-      en: Communication
-      ja: コミュニケーション
-    description:
-      en: Presentations, negotiation, persuasion, etc.
-      ja: プレゼン、交渉、説得など
-    target_samples: 6
-    priority: medium
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: innovation-transformation
-    name:
-      en: Innovation & Transformation
-      ja: イノベーション・変革
-    description:
-      en: Innovation creation, change management, etc.
-      ja: イノベーション創出、変革管理など
-    target_samples: 5
-    priority: high
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: specialized-domains
-    name:
-      en: Specialized Domains
-      ja: 専門領域
-    description:
-      en: Specific domains (healthcare, legal, finance, etc.)
-      ja: 特定の専門分野(医療、法律、金融など)
-    target_samples: 8
-    priority: medium
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
+- id: general
+  name:
+    en: General
+    ja: 汎用
+  description:
+    en: General-purpose dialogue prompt creation
+    ja: 汎用的な対話型プロンプト作成
+  target_samples: 1
+  priority: high
+  status:
+    en: complete
+    ja: complete
+    copilot: complete
+- id: business-management
+  name:
+    en: Business & Management
+    ja: ビジネス・経営
+  description:
+    en: Strategy, analysis, marketing, etc.
+    ja: 戦略立案、経営分析、マーケティングなど
+  target_samples: 12
+  priority: high
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: design-development
+  name:
+    en: Design & Development
+    ja: デザイン・開発
+  description:
+    en: Software design, UX/UI, systems, etc.
+    ja: ソフトウェア設計、UX/UI、システム開発など
+  target_samples: 20
+  priority: high
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: hr-organization
+  name:
+    en: HR & Organization
+    ja: 人材・組織
+  description:
+    en: Org development, training, team building, etc.
+    ja: 組織開発、人材育成、チームビルディングなど
+  target_samples: 12
+  priority: high
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: education
+  name:
+    en: Education
+    ja: 教育
+  description:
+    en: Curriculum design, materials, learning support, etc.
+    ja: カリキュラム設計、教材作成、学習支援など
+  target_samples: 8
+  priority: high
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: research
+  name:
+    en: Research
+    ja: 研究
+  description:
+    en: Research planning, literature review, experiment design, etc.
+    ja: 研究計画、文献調査、実験設計など
+  target_samples: 5
+  priority: medium
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: document-creation
+  name:
+    en: Document Creation
+    ja: 文書作成
+  description:
+    en: Reports, proposals, technical documents, etc.
+    ja: レポート、提案書、技術文書など
+  target_samples: 3
+  priority: medium
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: social-policy
+  name:
+    en: Social & Policy
+    ja: 社会・政策
+  description:
+    en: Policy planning, social issue analysis, etc.
+    ja: 政策立案、社会課題分析など
+  target_samples: 6
+  priority: medium
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: communication
+  name:
+    en: Communication
+    ja: コミュニケーション
+  description:
+    en: Presentations, negotiation, persuasion, etc.
+    ja: プレゼン、交渉、説得など
+  target_samples: 6
+  priority: medium
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: innovation-transformation
+  name:
+    en: Innovation & Transformation
+    ja: イノベーション・変革
+  description:
+    en: Innovation creation, change management, etc.
+    ja: イノベーション創出、変革管理など
+  target_samples: 5
+  priority: high
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: specialized-domains
+  name:
+    en: Specialized Domains
+    ja: 専門領域
+  description:
+    en: Specific domains (healthcare, legal, finance, etc.)
+    ja: 特定の専門分野(医療、法律、金融など)
+  target_samples: 8
+  priority: medium
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
 prompts:
-  # General (1)
-  - id: meta-prompt-generator
-    category: general
-    files:
-      en: en/prompts/general/meta-prompt-generator.md
-      ja: ja/prompts/general/meta-prompt-generator.md
-      copilot: copilot/prompts/general/meta-prompt-generator.md
-    status:
-      en: complete
-      ja: complete
-      copilot: planned
-
-  # Business & Management (8)
-  - id: business-strategy-consultant
-    category: business-management
-    files:
-      en: en/prompts/business-management/business-strategy-consultant.md
-      ja: ja/prompts/business-management/business-strategy-consultant.md
-      copilot: copilot/prompts/business-management/business-strategy-consultant.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: marketing-strategy-advisor
-    category: business-management
-    files:
-      en: en/prompts/business-management/marketing-strategy-advisor.md
-      ja: ja/prompts/business-management/marketing-strategy-advisor.md
-      copilot: copilot/prompts/business-management/marketing-strategy-advisor.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: financial-analysis-advisor
-    category: business-management
-    files:
-      en: en/prompts/business-management/financial-analysis-advisor.md
-      ja: ja/prompts/business-management/financial-analysis-advisor.md
-      copilot: copilot/prompts/business-management/financial-analysis-advisor.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: product-management-guide
-    category: business-management
-    files:
-      en: en/prompts/business-management/product-management-guide.md
-      ja: ja/prompts/business-management/product-management-guide.md
-      copilot: copilot/prompts/business-management/product-management-guide.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: sales-process-optimizer
-    category: business-management
-    files:
-      en: en/prompts/business-management/sales-process-optimizer.md
-      ja: ja/prompts/business-management/sales-process-optimizer.md
-      copilot: copilot/prompts/business-management/sales-process-optimizer.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: customer-experience-designer
-    category: business-management
-    files:
-      en: en/prompts/business-management/customer-experience-designer.md
-      ja: ja/prompts/business-management/customer-experience-designer.md
-      copilot: copilot/prompts/business-management/customer-experience-designer.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: data-analysis-specialist
-    category: business-management
-    files:
-      en: en/prompts/business-management/data-analysis-specialist.md
-      ja: ja/prompts/business-management/data-analysis-specialist.md
-      copilot: copilot/prompts/business-management/data-analysis-specialist.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: business-model-innovation
-    category: business-management
-    files:
-      en: en/prompts/business-management/business-model-innovation.md
-      ja: ja/prompts/business-management/business-model-innovation.md
-      copilot: copilot/prompts/business-management/business-model-innovation.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: data-analytics-strategy-consultant
-    category: business-management
-    files:
-      en: en/prompts/business-management/data-analytics-strategy-consultant.md
-      ja: ja/prompts/business-management/data-analytics-strategy-consultant.md
-      copilot: copilot/prompts/business-management/data-analytics-strategy-consultant.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: sustainability-esg-strategy-consultant
-    category: business-management
-    files:
-      en: en/prompts/business-management/sustainability-esg-strategy-consultant.md
-      ja: ja/prompts/business-management/sustainability-esg-strategy-consultant.md
-      copilot: copilot/prompts/business-management/sustainability-esg-strategy-consultant.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: corporate-strategy-portfolio-management
-    category: business-management
-    files:
-      en: en/prompts/business-management/corporate-strategy-portfolio-management.md
-      ja: ja/prompts/business-management/corporate-strategy-portfolio-management.md
-      copilot: copilot/prompts/business-management/corporate-strategy-portfolio-management.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: competitive-intelligence-market-research
-    category: business-management
-    files:
-      en: en/prompts/business-management/competitive-intelligence-market-research.md
-      ja: ja/prompts/business-management/competitive-intelligence-market-research.md
-      copilot: copilot/prompts/business-management/competitive-intelligence-market-research.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: digital-marketing-social-media-strategy
-    category: business-management
-    files:
-      en: en/prompts/business-management/digital-marketing-social-media-strategy.md
-      ja: ja/prompts/business-management/digital-marketing-social-media-strategy.md
-      copilot: copilot/prompts/business-management/digital-marketing-social-media-strategy.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  # Design & Development (18)
-  - id: software-architect
-    category: design-development
-    files:
-      en: en/prompts/design-development/software-architect.md
-      ja: ja/prompts/design-development/software-architect.md
-      copilot: copilot/prompts/design-development/software-architect.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: ux-ui-designer
-    category: design-development
-    files:
-      en: en/prompts/design-development/ux-ui-designer.md
-      ja: ja/prompts/design-development/ux-ui-designer.md
-      copilot: copilot/prompts/design-development/ux-ui-designer.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: system-design-guide
-    category: design-development
-    files:
-      en: en/prompts/design-development/system-design-guide.md
-      ja: ja/prompts/design-development/system-design-guide.md
-      copilot: copilot/prompts/design-development/system-design-guide.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: api-design-specialist
-    category: design-development
-    files:
-      en: en/prompts/design-development/api-design-specialist.md
-      ja: ja/prompts/design-development/api-design-specialist.md
-      copilot: copilot/prompts/design-development/api-design-specialist.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: code-review-mentor
-    category: design-development
-    files:
-      en: en/prompts/design-development/code-review-mentor.md
-      ja: ja/prompts/design-development/code-review-mentor.md
-      copilot: copilot/prompts/design-development/code-review-mentor.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: agile-coach
-    category: design-development
-    files:
-      en: en/prompts/design-development/agile-coach.md
-      ja: ja/prompts/design-development/agile-coach.md
-      copilot: copilot/prompts/design-development/agile-coach.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: design-system-architect
-    category: design-development
-    files:
-      en: en/prompts/design-development/design-system-architect.md
-      ja: ja/prompts/design-development/design-system-architect.md
-      copilot: copilot/prompts/design-development/design-system-architect.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: technical-writing-guide
-    category: design-development
-    files:
-      en: en/prompts/design-development/technical-writing-guide.md
-      ja: ja/prompts/design-development/technical-writing-guide.md
-      copilot: copilot/prompts/design-development/technical-writing-guide.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: devops-engineer
-    category: design-development
-    files:
-      en: en/prompts/design-development/devops-engineer.md
-      ja: ja/prompts/design-development/devops-engineer.md
-      copilot: copilot/prompts/design-development/devops-engineer.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: qa-test-engineer
-    category: design-development
-    files:
-      en: en/prompts/design-development/qa-test-engineer.md
-      ja: ja/prompts/design-development/qa-test-engineer.md
-      copilot: copilot/prompts/design-development/qa-test-engineer.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: frontend-specialist
-    category: design-development
-    files:
-      en: en/prompts/design-development/frontend-specialist.md
-      ja: ja/prompts/design-development/frontend-specialist.md
-      copilot: copilot/prompts/design-development/frontend-specialist.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: mobile-developer
-    category: design-development
-    files:
-      en: en/prompts/design-development/mobile-developer.md
-      ja: ja/prompts/design-development/mobile-developer.md
-      copilot: copilot/prompts/design-development/mobile-developer.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: database-architect
-    category: design-development
-    files:
-      en: en/prompts/design-development/database-architect.md
-      ja: ja/prompts/design-development/database-architect.md
-      copilot: copilot/prompts/design-development/database-architect.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: data-engineer
-    category: design-development
-    files:
-      en: en/prompts/design-development/data-engineer.md
-      ja: ja/prompts/design-development/data-engineer.md
-      copilot: copilot/prompts/design-development/data-engineer.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: security-engineer
-    category: design-development
-    files:
-      en: en/prompts/design-development/security-engineer.md
-      ja: ja/prompts/design-development/security-engineer.md
-      copilot: copilot/prompts/design-development/security-engineer.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: ml-ai-engineer
-    category: design-development
-    files:
-      en: en/prompts/design-development/ml-ai-engineer.md
-      ja: ja/prompts/design-development/ml-ai-engineer.md
-      copilot: copilot/prompts/design-development/ml-ai-engineer.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: backend-developer
-    category: design-development
-    files:
-      en: en/prompts/design-development/backend-developer.md
-      ja: ja/prompts/design-development/backend-developer.md
-      copilot: copilot/prompts/design-development/backend-developer.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: cloud-architect
-    category: design-development
-    files:
-      en: en/prompts/design-development/cloud-architect.md
-      ja: ja/prompts/design-development/cloud-architect.md
-      copilot: copilot/prompts/design-development/cloud-architect.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: technology-strategy-architecture-advisor
-    category: design-development
-    files:
-      en: en/prompts/design-development/technology-strategy-architecture-advisor.md
-      ja: ja/prompts/design-development/technology-strategy-architecture-advisor.md
-      copilot: copilot/prompts/design-development/technology-strategy-architecture-advisor.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: digital-product-management
-    category: design-development
-    files:
-      en: en/prompts/design-development/digital-product-management.md
-      ja: ja/prompts/design-development/digital-product-management.md
-      copilot: copilot/prompts/design-development/digital-product-management.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  # HR & Organization (6)
-  - id: organizational-development-consultant
-    category: hr-organization
-    files:
-      en: en/prompts/hr-organization/organizational-development-consultant.md
-      ja: ja/prompts/hr-organization/organizational-development-consultant.md
-      copilot: copilot/prompts/hr-organization/organizational-development-consultant.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: talent-management-strategist
-    category: hr-organization
-    files:
-      en: en/prompts/hr-organization/talent-management-strategist.md
-      ja: ja/prompts/hr-organization/talent-management-strategist.md
-      copilot: copilot/prompts/hr-organization/talent-management-strategist.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: team-building-facilitator
-    category: hr-organization
-    files:
-      en: en/prompts/hr-organization/team-building-facilitator.md
-      ja: ja/prompts/hr-organization/team-building-facilitator.md
-      copilot: copilot/prompts/hr-organization/team-building-facilitator.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: performance-management-advisor
-    category: hr-organization
-    files:
-      en: en/prompts/hr-organization/performance-management-advisor.md
-      ja: ja/prompts/hr-organization/performance-management-advisor.md
-      copilot: copilot/prompts/hr-organization/performance-management-advisor.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: executive-leadership-coach
-    category: hr-organization
-    files:
-      en: en/prompts/hr-organization/executive-leadership-coach.md
-      ja: ja/prompts/hr-organization/executive-leadership-coach.md
-      copilot: copilot/prompts/hr-organization/executive-leadership-coach.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: compensation-benefits-strategy-consultant
-    category: hr-organization
-    files:
-      en: en/prompts/hr-organization/compensation-benefits-strategy-consultant.md
-      ja: ja/prompts/hr-organization/compensation-benefits-strategy-consultant.md
-      copilot: copilot/prompts/hr-organization/compensation-benefits-strategy-consultant.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: diversity-equity-inclusion-specialist
-    category: hr-organization
-    files:
-      en: en/prompts/hr-organization/diversity-equity-inclusion-specialist.md
-      ja: ja/prompts/hr-organization/diversity-equity-inclusion-specialist.md
-      copilot: copilot/prompts/hr-organization/diversity-equity-inclusion-specialist.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: recruitment-talent-acquisition-specialist
-    category: hr-organization
-    files:
-      en: en/prompts/hr-organization/recruitment-talent-acquisition-specialist.md
-      ja: ja/prompts/hr-organization/recruitment-talent-acquisition-specialist.md
-      copilot: copilot/prompts/hr-organization/recruitment-talent-acquisition-specialist.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: learning-development-strategist
-    category: hr-organization
-    files:
-      en: en/prompts/hr-organization/learning-development-strategist.md
-      ja: ja/prompts/hr-organization/learning-development-strategist.md
-      copilot: copilot/prompts/hr-organization/learning-development-strategist.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: employee-engagement-culture-specialist
-    category: hr-organization
-    files:
-      en: en/prompts/hr-organization/employee-engagement-culture-specialist.md
-      ja: ja/prompts/hr-organization/employee-engagement-culture-specialist.md
-      copilot: copilot/prompts/hr-organization/employee-engagement-culture-specialist.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: workforce-planning-people-analytics
-    category: hr-organization
-    files:
-      en: en/prompts/hr-organization/workforce-planning-people-analytics.md
-      ja: ja/prompts/hr-organization/workforce-planning-people-analytics.md
-      copilot: copilot/prompts/hr-organization/workforce-planning-people-analytics.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  # Education (7)
-  - id: curriculum-designer
-    category: education
-    files:
-      en: en/prompts/education/curriculum-designer.md
-      ja: ja/prompts/education/curriculum-designer.md
-      copilot: copilot/prompts/education/curriculum-designer.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: instructional-designer
-    category: education
-    files:
-      en: en/prompts/education/instructional-designer.md
-      ja: ja/prompts/education/instructional-designer.md
-      copilot: copilot/prompts/education/instructional-designer.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: learning-assessment-specialist
-    category: education
-    files:
-      en: en/prompts/education/learning-assessment-specialist.md
-      ja: ja/prompts/education/learning-assessment-specialist.md
-      copilot: copilot/prompts/education/learning-assessment-specialist.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: educational-technology-specialist
-    category: education
-    files:
-      en: en/prompts/education/educational-technology-specialist.md
-      ja: ja/prompts/education/educational-technology-specialist.md
-      copilot: copilot/prompts/education/educational-technology-specialist.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: student-centered-learning-designer
-    category: education
-    files:
-      en: en/prompts/education/student-centered-learning-designer.md
-      ja: ja/prompts/education/student-centered-learning-designer.md
-      copilot: copilot/prompts/education/student-centered-learning-designer.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: professional-development-specialist
-    category: education
-    files:
-      en: en/prompts/education/professional-development-specialist.md
-      ja: ja/prompts/education/professional-development-specialist.md
-      copilot: copilot/prompts/education/professional-development-specialist.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: adult-learning-specialist
-    category: education
-    files:
-      en: en/prompts/education/adult-learning-specialist.md
-      ja: ja/prompts/education/adult-learning-specialist.md
-      copilot: copilot/prompts/education/adult-learning-specialist.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: special-education-inclusive-education
-    category: education
-    files:
-      en: en/prompts/education/special-education-inclusive-education.md
-      ja: ja/prompts/education/special-education-inclusive-education.md
-      copilot: copilot/prompts/education/special-education-inclusive-education.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  # Research (3)
-  - id: research-methodology-consultant
-    category: research
-    files:
-      en: en/prompts/research/research-methodology-consultant.md
-      ja: ja/prompts/research/research-methodology-consultant.md
-      copilot: copilot/prompts/research/research-methodology-consultant.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: literature-review-specialist
-    category: research
-    files:
-      en: en/prompts/research/literature-review-specialist.md
-      ja: ja/prompts/research/literature-review-specialist.md
-      copilot: copilot/prompts/research/literature-review-specialist.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: business-report-analyst
-    category: research
-    files:
-      en: en/prompts/research/business-report-analyst.md
-      ja: ja/prompts/research/business-report-analyst.md
-      copilot: copilot/prompts/research/business-report-analyst.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: grant-writing-research-funding
-    category: research
-    files:
-      en: en/prompts/research/grant-writing-research-funding.md
-      ja: ja/prompts/research/grant-writing-research-funding.md
-      copilot: copilot/prompts/research/grant-writing-research-funding.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: academic-writing-publishing
-    category: research
-    files:
-      en: en/prompts/research/academic-writing-publishing.md
-      ja: ja/prompts/research/academic-writing-publishing.md
-      copilot: copilot/prompts/research/academic-writing-publishing.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  # Document Creation (3)
-  - id: technical-documentation-writer
-    category: document-creation
-    files:
-      en: en/prompts/document-creation/technical-documentation-writer.md
-      ja: ja/prompts/document-creation/technical-documentation-writer.md
-      copilot: copilot/prompts/document-creation/technical-documentation-writer.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: proposal-writer
-    category: document-creation
-    files:
-      en: en/prompts/document-creation/proposal-writer.md
-      ja: ja/prompts/document-creation/proposal-writer.md
-      copilot: copilot/prompts/document-creation/proposal-writer.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: business-report-analyst
-    category: document-creation
-    files:
-      en: en/prompts/document-creation/business-report-analyst.md
-      ja: ja/prompts/document-creation/business-report-analyst.md
-      copilot: copilot/prompts/document-creation/business-report-analyst.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  # Social & Policy (3)
-  - id: policy-analysis-consultant
-    category: social-policy
-    files:
-      en: en/prompts/social-policy/policy-analysis-consultant.md
-      ja: ja/prompts/social-policy/policy-analysis-consultant.md
-      copilot: copilot/prompts/social-policy/policy-analysis-consultant.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: community-engagement-specialist
-    category: social-policy
-    files:
-      en: en/prompts/social-policy/community-engagement-specialist.md
-      ja: ja/prompts/social-policy/community-engagement-specialist.md
-      copilot: copilot/prompts/social-policy/community-engagement-specialist.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: public-program-evaluator
-    category: social-policy
-    files:
-      en: en/prompts/social-policy/public-program-evaluator.md
-      ja: ja/prompts/social-policy/public-program-evaluator.md
-      copilot: copilot/prompts/social-policy/public-program-evaluator.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: environmental-climate-policy-consultant
-    category: social-policy
-    files:
-      en: en/prompts/social-policy/environmental-climate-policy-consultant.md
-      ja: ja/prompts/social-policy/environmental-climate-policy-consultant.md
-      copilot: copilot/prompts/social-policy/environmental-climate-policy-consultant.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: public-health-strategist
-    category: social-policy
-    files:
-      en: en/prompts/social-policy/public-health-strategist.md
-      ja: ja/prompts/social-policy/public-health-strategist.md
-      copilot: copilot/prompts/social-policy/public-health-strategist.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: urban-planning-smart-cities
-    category: social-policy
-    files:
-      en: en/prompts/social-policy/urban-planning-smart-cities.md
-      ja: ja/prompts/social-policy/urban-planning-smart-cities.md
-      copilot: copilot/prompts/social-policy/urban-planning-smart-cities.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  # Communication (5)
-  - id: strategic-communications-director
-    category: communication
-    files:
-      en: en/prompts/communication/strategic-communications-director.md
-      ja: ja/prompts/communication/strategic-communications-director.md
-      copilot: copilot/prompts/communication/strategic-communications-director.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: public-relations-strategist
-    category: communication
-    files:
-      en: en/prompts/communication/public-relations-strategist.md
-      ja: ja/prompts/communication/public-relations-strategist.md
-      copilot: copilot/prompts/communication/public-relations-strategist.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: brand-messaging-specialist
-    category: communication
-    files:
-      en: en/prompts/communication/brand-messaging-specialist.md
-      ja: ja/prompts/communication/brand-messaging-specialist.md
-      copilot: copilot/prompts/communication/brand-messaging-specialist.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: presentation-public-speaking-coach
-    category: communication
-    files:
-      en: en/prompts/communication/presentation-public-speaking-coach.md
-      ja: ja/prompts/communication/presentation-public-speaking-coach.md
-      copilot: copilot/prompts/communication/presentation-public-speaking-coach.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: executive-communications-specialist
-    category: communication
-    files:
-      en: en/prompts/communication/executive-communications-specialist.md
-      ja: ja/prompts/communication/executive-communications-specialist.md
-      copilot: copilot/prompts/communication/executive-communications-specialist.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: internal-communications-specialist
-    category: communication
-    files:
-      en: en/prompts/communication/internal-communications-specialist.md
-      ja: ja/prompts/communication/internal-communications-specialist.md
-      copilot: copilot/prompts/communication/internal-communications-specialist.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  # Innovation & Transformation (3)
-  - id: innovation-strategist
-    category: innovation-transformation
-    files:
-      en: en/prompts/innovation-transformation/innovation-strategist.md
-      ja: ja/prompts/innovation-transformation/innovation-strategist.md
-      copilot: copilot/prompts/innovation-transformation/innovation-strategist.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: digital-transformation-consultant
-    category: innovation-transformation
-    files:
-      en: en/prompts/innovation-transformation/digital-transformation-consultant.md
-      ja: ja/prompts/innovation-transformation/digital-transformation-consultant.md
-      copilot: copilot/prompts/innovation-transformation/digital-transformation-consultant.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: change-management-specialist
-    category: innovation-transformation
-    files:
-      en: en/prompts/innovation-transformation/change-management-specialist.md
-      ja: ja/prompts/innovation-transformation/change-management-specialist.md
-      copilot: copilot/prompts/innovation-transformation/change-management-specialist.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: ai-ml-strategy-consultant
-    category: innovation-transformation
-    files:
-      en: en/prompts/innovation-transformation/ai-ml-strategy-consultant.md
-      ja: ja/prompts/innovation-transformation/ai-ml-strategy-consultant.md
-      copilot: copilot/prompts/innovation-transformation/ai-ml-strategy-consultant.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: agile-devops-transformation-coach
-    category: innovation-transformation
-    files:
-      en: en/prompts/innovation-transformation/agile-devops-transformation-coach.md
-      ja: ja/prompts/innovation-transformation/agile-devops-transformation-coach.md
-      copilot: copilot/prompts/innovation-transformation/agile-devops-transformation-coach.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  # Specialized Domains (4)
-  - id: healthcare-operations-consultant
-    category: specialized-domains
-    files:
-      en: en/prompts/specialized-domains/healthcare-operations-consultant.md
-      ja: ja/prompts/specialized-domains/healthcare-operations-consultant.md
-      copilot: copilot/prompts/specialized-domains/healthcare-operations-consultant.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: legal-compliance-advisor
-    category: specialized-domains
-    files:
-      en: en/prompts/specialized-domains/legal-compliance-advisor.md
-      ja: ja/prompts/specialized-domains/legal-compliance-advisor.md
-      copilot: copilot/prompts/specialized-domains/legal-compliance-advisor.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: financial-planning-analyst
-    category: specialized-domains
-    files:
-      en: en/prompts/specialized-domains/financial-planning-analyst.md
-      ja: ja/prompts/specialized-domains/financial-planning-analyst.md
-      copilot: copilot/prompts/specialized-domains/financial-planning-analyst.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: cybersecurity-strategy-consultant
-    category: specialized-domains
-    files:
-      en: en/prompts/specialized-domains/cybersecurity-strategy-consultant.md
-      ja: ja/prompts/specialized-domains/cybersecurity-strategy-consultant.md
-      copilot: copilot/prompts/specialized-domains/cybersecurity-strategy-consultant.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: manufacturing-industry-4-consultant
-    category: specialized-domains
-    files:
-      en: en/prompts/specialized-domains/manufacturing-industry-4-consultant.md
-      ja: ja/prompts/specialized-domains/manufacturing-industry-4-consultant.md
-      copilot: copilot/prompts/specialized-domains/manufacturing-industry-4-consultant.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: retail-ecommerce-strategist
-    category: specialized-domains
-    files:
-      en: en/prompts/specialized-domains/retail-ecommerce-strategist.md
-      ja: ja/prompts/specialized-domains/retail-ecommerce-strategist.md
-      copilot: copilot/prompts/specialized-domains/retail-ecommerce-strategist.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: financial-services-banking-consultant
-    category: specialized-domains
-    files:
-      en: en/prompts/specialized-domains/financial-services-banking-consultant.md
-      ja: ja/prompts/specialized-domains/financial-services-banking-consultant.md
-      copilot: copilot/prompts/specialized-domains/financial-services-banking-consultant.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
-  - id: enterprise-systems-erp-crm-consultant
-    category: specialized-domains
-    files:
-      en: en/prompts/specialized-domains/enterprise-systems-erp-crm-consultant.md
-      ja: ja/prompts/specialized-domains/enterprise-systems-erp-crm-consultant.md
-      copilot: copilot/prompts/specialized-domains/enterprise-systems-erp-crm-consultant.md
-    status:
-      en: complete
-      ja: planned
-      copilot: planned
-
+- id: meta-prompt-generator
+  category: general
+  files:
+    en: en/prompts/general/meta-prompt-generator.md
+    ja: ja/prompts/general/meta-prompt-generator.md
+    copilot: copilot/prompts/general/meta-prompt-generator.md
+  status:
+    en: complete
+    ja: complete
+    copilot: complete
+- id: business-strategy-consultant
+  category: business-management
+  files:
+    en: en/prompts/business-management/business-strategy-consultant.md
+    ja: ja/prompts/business-management/business-strategy-consultant.md
+    copilot: copilot/prompts/business-management/business-strategy-consultant.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: marketing-strategy-advisor
+  category: business-management
+  files:
+    en: en/prompts/business-management/marketing-strategy-advisor.md
+    ja: ja/prompts/business-management/marketing-strategy-advisor.md
+    copilot: copilot/prompts/business-management/marketing-strategy-advisor.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: financial-analysis-advisor
+  category: business-management
+  files:
+    en: en/prompts/business-management/financial-analysis-advisor.md
+    ja: ja/prompts/business-management/financial-analysis-advisor.md
+    copilot: copilot/prompts/business-management/financial-analysis-advisor.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: product-management-guide
+  category: business-management
+  files:
+    en: en/prompts/business-management/product-management-guide.md
+    ja: ja/prompts/business-management/product-management-guide.md
+    copilot: copilot/prompts/business-management/product-management-guide.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: sales-process-optimizer
+  category: business-management
+  files:
+    en: en/prompts/business-management/sales-process-optimizer.md
+    ja: ja/prompts/business-management/sales-process-optimizer.md
+    copilot: copilot/prompts/business-management/sales-process-optimizer.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: customer-experience-designer
+  category: business-management
+  files:
+    en: en/prompts/business-management/customer-experience-designer.md
+    ja: ja/prompts/business-management/customer-experience-designer.md
+    copilot: copilot/prompts/business-management/customer-experience-designer.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: data-analysis-specialist
+  category: business-management
+  files:
+    en: en/prompts/business-management/data-analysis-specialist.md
+    ja: ja/prompts/business-management/data-analysis-specialist.md
+    copilot: copilot/prompts/business-management/data-analysis-specialist.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: business-model-innovation
+  category: business-management
+  files:
+    en: en/prompts/business-management/business-model-innovation.md
+    ja: ja/prompts/business-management/business-model-innovation.md
+    copilot: copilot/prompts/business-management/business-model-innovation.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: data-analytics-strategy-consultant
+  category: business-management
+  files:
+    en: en/prompts/business-management/data-analytics-strategy-consultant.md
+    ja: ja/prompts/business-management/data-analytics-strategy-consultant.md
+    copilot: copilot/prompts/business-management/data-analytics-strategy-consultant.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: sustainability-esg-strategy-consultant
+  category: business-management
+  files:
+    en: en/prompts/business-management/sustainability-esg-strategy-consultant.md
+    ja: ja/prompts/business-management/sustainability-esg-strategy-consultant.md
+    copilot: copilot/prompts/business-management/sustainability-esg-strategy-consultant.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: corporate-strategy-portfolio-management
+  category: business-management
+  files:
+    en: en/prompts/business-management/corporate-strategy-portfolio-management.md
+    ja: ja/prompts/business-management/corporate-strategy-portfolio-management.md
+    copilot: copilot/prompts/business-management/corporate-strategy-portfolio-management.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: competitive-intelligence-market-research
+  category: business-management
+  files:
+    en: en/prompts/business-management/competitive-intelligence-market-research.md
+    ja: ja/prompts/business-management/competitive-intelligence-market-research.md
+    copilot: copilot/prompts/business-management/competitive-intelligence-market-research.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: digital-marketing-social-media-strategy
+  category: business-management
+  files:
+    en: en/prompts/business-management/digital-marketing-social-media-strategy.md
+    ja: ja/prompts/business-management/digital-marketing-social-media-strategy.md
+    copilot: copilot/prompts/business-management/digital-marketing-social-media-strategy.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: software-architect
+  category: design-development
+  files:
+    en: en/prompts/design-development/software-architect.md
+    ja: ja/prompts/design-development/software-architect.md
+    copilot: copilot/prompts/design-development/software-architect.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: ux-ui-designer
+  category: design-development
+  files:
+    en: en/prompts/design-development/ux-ui-designer.md
+    ja: ja/prompts/design-development/ux-ui-designer.md
+    copilot: copilot/prompts/design-development/ux-ui-designer.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: system-design-guide
+  category: design-development
+  files:
+    en: en/prompts/design-development/system-design-guide.md
+    ja: ja/prompts/design-development/system-design-guide.md
+    copilot: copilot/prompts/design-development/system-design-guide.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: api-design-specialist
+  category: design-development
+  files:
+    en: en/prompts/design-development/api-design-specialist.md
+    ja: ja/prompts/design-development/api-design-specialist.md
+    copilot: copilot/prompts/design-development/api-design-specialist.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: code-review-mentor
+  category: design-development
+  files:
+    en: en/prompts/design-development/code-review-mentor.md
+    ja: ja/prompts/design-development/code-review-mentor.md
+    copilot: copilot/prompts/design-development/code-review-mentor.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: agile-coach
+  category: design-development
+  files:
+    en: en/prompts/design-development/agile-coach.md
+    ja: ja/prompts/design-development/agile-coach.md
+    copilot: copilot/prompts/design-development/agile-coach.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: design-system-architect
+  category: design-development
+  files:
+    en: en/prompts/design-development/design-system-architect.md
+    ja: ja/prompts/design-development/design-system-architect.md
+    copilot: copilot/prompts/design-development/design-system-architect.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: technical-writing-guide
+  category: design-development
+  files:
+    en: en/prompts/design-development/technical-writing-guide.md
+    ja: ja/prompts/design-development/technical-writing-guide.md
+    copilot: copilot/prompts/design-development/technical-writing-guide.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: devops-engineer
+  category: design-development
+  files:
+    en: en/prompts/design-development/devops-engineer.md
+    ja: ja/prompts/design-development/devops-engineer.md
+    copilot: copilot/prompts/design-development/devops-engineer.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: qa-test-engineer
+  category: design-development
+  files:
+    en: en/prompts/design-development/qa-test-engineer.md
+    ja: ja/prompts/design-development/qa-test-engineer.md
+    copilot: copilot/prompts/design-development/qa-test-engineer.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: frontend-specialist
+  category: design-development
+  files:
+    en: en/prompts/design-development/frontend-specialist.md
+    ja: ja/prompts/design-development/frontend-specialist.md
+    copilot: copilot/prompts/design-development/frontend-specialist.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: mobile-developer
+  category: design-development
+  files:
+    en: en/prompts/design-development/mobile-developer.md
+    ja: ja/prompts/design-development/mobile-developer.md
+    copilot: copilot/prompts/design-development/mobile-developer.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: database-architect
+  category: design-development
+  files:
+    en: en/prompts/design-development/database-architect.md
+    ja: ja/prompts/design-development/database-architect.md
+    copilot: copilot/prompts/design-development/database-architect.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: data-engineer
+  category: design-development
+  files:
+    en: en/prompts/design-development/data-engineer.md
+    ja: ja/prompts/design-development/data-engineer.md
+    copilot: copilot/prompts/design-development/data-engineer.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: security-engineer
+  category: design-development
+  files:
+    en: en/prompts/design-development/security-engineer.md
+    ja: ja/prompts/design-development/security-engineer.md
+    copilot: copilot/prompts/design-development/security-engineer.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: ml-ai-engineer
+  category: design-development
+  files:
+    en: en/prompts/design-development/ml-ai-engineer.md
+    ja: ja/prompts/design-development/ml-ai-engineer.md
+    copilot: copilot/prompts/design-development/ml-ai-engineer.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: backend-developer
+  category: design-development
+  files:
+    en: en/prompts/design-development/backend-developer.md
+    ja: ja/prompts/design-development/backend-developer.md
+    copilot: copilot/prompts/design-development/backend-developer.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: cloud-architect
+  category: design-development
+  files:
+    en: en/prompts/design-development/cloud-architect.md
+    ja: ja/prompts/design-development/cloud-architect.md
+    copilot: copilot/prompts/design-development/cloud-architect.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: technology-strategy-architecture-advisor
+  category: design-development
+  files:
+    en: en/prompts/design-development/technology-strategy-architecture-advisor.md
+    ja: ja/prompts/design-development/technology-strategy-architecture-advisor.md
+    copilot: copilot/prompts/design-development/technology-strategy-architecture-advisor.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: digital-product-management
+  category: design-development
+  files:
+    en: en/prompts/design-development/digital-product-management.md
+    ja: ja/prompts/design-development/digital-product-management.md
+    copilot: copilot/prompts/design-development/digital-product-management.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: organizational-development-consultant
+  category: hr-organization
+  files:
+    en: en/prompts/hr-organization/organizational-development-consultant.md
+    ja: ja/prompts/hr-organization/organizational-development-consultant.md
+    copilot: copilot/prompts/hr-organization/organizational-development-consultant.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: talent-management-strategist
+  category: hr-organization
+  files:
+    en: en/prompts/hr-organization/talent-management-strategist.md
+    ja: ja/prompts/hr-organization/talent-management-strategist.md
+    copilot: copilot/prompts/hr-organization/talent-management-strategist.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: team-building-facilitator
+  category: hr-organization
+  files:
+    en: en/prompts/hr-organization/team-building-facilitator.md
+    ja: ja/prompts/hr-organization/team-building-facilitator.md
+    copilot: copilot/prompts/hr-organization/team-building-facilitator.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: performance-management-advisor
+  category: hr-organization
+  files:
+    en: en/prompts/hr-organization/performance-management-advisor.md
+    ja: ja/prompts/hr-organization/performance-management-advisor.md
+    copilot: copilot/prompts/hr-organization/performance-management-advisor.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: executive-leadership-coach
+  category: hr-organization
+  files:
+    en: en/prompts/hr-organization/executive-leadership-coach.md
+    ja: ja/prompts/hr-organization/executive-leadership-coach.md
+    copilot: copilot/prompts/hr-organization/executive-leadership-coach.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: compensation-benefits-strategy-consultant
+  category: hr-organization
+  files:
+    en: en/prompts/hr-organization/compensation-benefits-strategy-consultant.md
+    ja: ja/prompts/hr-organization/compensation-benefits-strategy-consultant.md
+    copilot: copilot/prompts/hr-organization/compensation-benefits-strategy-consultant.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: diversity-equity-inclusion-specialist
+  category: hr-organization
+  files:
+    en: en/prompts/hr-organization/diversity-equity-inclusion-specialist.md
+    ja: ja/prompts/hr-organization/diversity-equity-inclusion-specialist.md
+    copilot: copilot/prompts/hr-organization/diversity-equity-inclusion-specialist.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: recruitment-talent-acquisition-specialist
+  category: hr-organization
+  files:
+    en: en/prompts/hr-organization/recruitment-talent-acquisition-specialist.md
+    ja: ja/prompts/hr-organization/recruitment-talent-acquisition-specialist.md
+    copilot: copilot/prompts/hr-organization/recruitment-talent-acquisition-specialist.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: learning-development-strategist
+  category: hr-organization
+  files:
+    en: en/prompts/hr-organization/learning-development-strategist.md
+    ja: ja/prompts/hr-organization/learning-development-strategist.md
+    copilot: copilot/prompts/hr-organization/learning-development-strategist.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: employee-engagement-culture-specialist
+  category: hr-organization
+  files:
+    en: en/prompts/hr-organization/employee-engagement-culture-specialist.md
+    ja: ja/prompts/hr-organization/employee-engagement-culture-specialist.md
+    copilot: copilot/prompts/hr-organization/employee-engagement-culture-specialist.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: workforce-planning-people-analytics
+  category: hr-organization
+  files:
+    en: en/prompts/hr-organization/workforce-planning-people-analytics.md
+    ja: ja/prompts/hr-organization/workforce-planning-people-analytics.md
+    copilot: copilot/prompts/hr-organization/workforce-planning-people-analytics.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: curriculum-designer
+  category: education
+  files:
+    en: en/prompts/education/curriculum-designer.md
+    ja: ja/prompts/education/curriculum-designer.md
+    copilot: copilot/prompts/education/curriculum-designer.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: instructional-designer
+  category: education
+  files:
+    en: en/prompts/education/instructional-designer.md
+    ja: ja/prompts/education/instructional-designer.md
+    copilot: copilot/prompts/education/instructional-designer.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: learning-assessment-specialist
+  category: education
+  files:
+    en: en/prompts/education/learning-assessment-specialist.md
+    ja: ja/prompts/education/learning-assessment-specialist.md
+    copilot: copilot/prompts/education/learning-assessment-specialist.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: educational-technology-specialist
+  category: education
+  files:
+    en: en/prompts/education/educational-technology-specialist.md
+    ja: ja/prompts/education/educational-technology-specialist.md
+    copilot: copilot/prompts/education/educational-technology-specialist.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: student-centered-learning-designer
+  category: education
+  files:
+    en: en/prompts/education/student-centered-learning-designer.md
+    ja: ja/prompts/education/student-centered-learning-designer.md
+    copilot: copilot/prompts/education/student-centered-learning-designer.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: professional-development-specialist
+  category: education
+  files:
+    en: en/prompts/education/professional-development-specialist.md
+    ja: ja/prompts/education/professional-development-specialist.md
+    copilot: copilot/prompts/education/professional-development-specialist.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: adult-learning-specialist
+  category: education
+  files:
+    en: en/prompts/education/adult-learning-specialist.md
+    ja: ja/prompts/education/adult-learning-specialist.md
+    copilot: copilot/prompts/education/adult-learning-specialist.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: special-education-inclusive-education
+  category: education
+  files:
+    en: en/prompts/education/special-education-inclusive-education.md
+    ja: ja/prompts/education/special-education-inclusive-education.md
+    copilot: copilot/prompts/education/special-education-inclusive-education.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: research-methodology-consultant
+  category: research
+  files:
+    en: en/prompts/research/research-methodology-consultant.md
+    ja: ja/prompts/research/research-methodology-consultant.md
+    copilot: copilot/prompts/research/research-methodology-consultant.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: literature-review-specialist
+  category: research
+  files:
+    en: en/prompts/research/literature-review-specialist.md
+    ja: ja/prompts/research/literature-review-specialist.md
+    copilot: copilot/prompts/research/literature-review-specialist.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: business-report-analyst
+  category: research
+  files:
+    en: en/prompts/research/business-report-analyst.md
+    ja: ja/prompts/research/business-report-analyst.md
+    copilot: copilot/prompts/research/business-report-analyst.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: grant-writing-research-funding
+  category: research
+  files:
+    en: en/prompts/research/grant-writing-research-funding.md
+    ja: ja/prompts/research/grant-writing-research-funding.md
+    copilot: copilot/prompts/research/grant-writing-research-funding.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: academic-writing-publishing
+  category: research
+  files:
+    en: en/prompts/research/academic-writing-publishing.md
+    ja: ja/prompts/research/academic-writing-publishing.md
+    copilot: copilot/prompts/research/academic-writing-publishing.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: technical-documentation-writer
+  category: document-creation
+  files:
+    en: en/prompts/document-creation/technical-documentation-writer.md
+    ja: ja/prompts/document-creation/technical-documentation-writer.md
+    copilot: copilot/prompts/document-creation/technical-documentation-writer.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: proposal-writer
+  category: document-creation
+  files:
+    en: en/prompts/document-creation/proposal-writer.md
+    ja: ja/prompts/document-creation/proposal-writer.md
+    copilot: copilot/prompts/document-creation/proposal-writer.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: business-report-analyst
+  category: document-creation
+  files:
+    en: en/prompts/document-creation/business-report-analyst.md
+    ja: ja/prompts/document-creation/business-report-analyst.md
+    copilot: copilot/prompts/document-creation/business-report-analyst.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: policy-analysis-consultant
+  category: social-policy
+  files:
+    en: en/prompts/social-policy/policy-analysis-consultant.md
+    ja: ja/prompts/social-policy/policy-analysis-consultant.md
+    copilot: copilot/prompts/social-policy/policy-analysis-consultant.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: community-engagement-specialist
+  category: social-policy
+  files:
+    en: en/prompts/social-policy/community-engagement-specialist.md
+    ja: ja/prompts/social-policy/community-engagement-specialist.md
+    copilot: copilot/prompts/social-policy/community-engagement-specialist.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: public-program-evaluator
+  category: social-policy
+  files:
+    en: en/prompts/social-policy/public-program-evaluator.md
+    ja: ja/prompts/social-policy/public-program-evaluator.md
+    copilot: copilot/prompts/social-policy/public-program-evaluator.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: environmental-climate-policy-consultant
+  category: social-policy
+  files:
+    en: en/prompts/social-policy/environmental-climate-policy-consultant.md
+    ja: ja/prompts/social-policy/environmental-climate-policy-consultant.md
+    copilot: copilot/prompts/social-policy/environmental-climate-policy-consultant.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: public-health-strategist
+  category: social-policy
+  files:
+    en: en/prompts/social-policy/public-health-strategist.md
+    ja: ja/prompts/social-policy/public-health-strategist.md
+    copilot: copilot/prompts/social-policy/public-health-strategist.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: urban-planning-smart-cities
+  category: social-policy
+  files:
+    en: en/prompts/social-policy/urban-planning-smart-cities.md
+    ja: ja/prompts/social-policy/urban-planning-smart-cities.md
+    copilot: copilot/prompts/social-policy/urban-planning-smart-cities.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: strategic-communications-director
+  category: communication
+  files:
+    en: en/prompts/communication/strategic-communications-director.md
+    ja: ja/prompts/communication/strategic-communications-director.md
+    copilot: copilot/prompts/communication/strategic-communications-director.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: public-relations-strategist
+  category: communication
+  files:
+    en: en/prompts/communication/public-relations-strategist.md
+    ja: ja/prompts/communication/public-relations-strategist.md
+    copilot: copilot/prompts/communication/public-relations-strategist.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: brand-messaging-specialist
+  category: communication
+  files:
+    en: en/prompts/communication/brand-messaging-specialist.md
+    ja: ja/prompts/communication/brand-messaging-specialist.md
+    copilot: copilot/prompts/communication/brand-messaging-specialist.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: presentation-public-speaking-coach
+  category: communication
+  files:
+    en: en/prompts/communication/presentation-public-speaking-coach.md
+    ja: ja/prompts/communication/presentation-public-speaking-coach.md
+    copilot: copilot/prompts/communication/presentation-public-speaking-coach.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: executive-communications-specialist
+  category: communication
+  files:
+    en: en/prompts/communication/executive-communications-specialist.md
+    ja: ja/prompts/communication/executive-communications-specialist.md
+    copilot: copilot/prompts/communication/executive-communications-specialist.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: internal-communications-specialist
+  category: communication
+  files:
+    en: en/prompts/communication/internal-communications-specialist.md
+    ja: ja/prompts/communication/internal-communications-specialist.md
+    copilot: copilot/prompts/communication/internal-communications-specialist.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: innovation-strategist
+  category: innovation-transformation
+  files:
+    en: en/prompts/innovation-transformation/innovation-strategist.md
+    ja: ja/prompts/innovation-transformation/innovation-strategist.md
+    copilot: copilot/prompts/innovation-transformation/innovation-strategist.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: digital-transformation-consultant
+  category: innovation-transformation
+  files:
+    en: en/prompts/innovation-transformation/digital-transformation-consultant.md
+    ja: ja/prompts/innovation-transformation/digital-transformation-consultant.md
+    copilot: copilot/prompts/innovation-transformation/digital-transformation-consultant.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: change-management-specialist
+  category: innovation-transformation
+  files:
+    en: en/prompts/innovation-transformation/change-management-specialist.md
+    ja: ja/prompts/innovation-transformation/change-management-specialist.md
+    copilot: copilot/prompts/innovation-transformation/change-management-specialist.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: ai-ml-strategy-consultant
+  category: innovation-transformation
+  files:
+    en: en/prompts/innovation-transformation/ai-ml-strategy-consultant.md
+    ja: ja/prompts/innovation-transformation/ai-ml-strategy-consultant.md
+    copilot: copilot/prompts/innovation-transformation/ai-ml-strategy-consultant.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: agile-devops-transformation-coach
+  category: innovation-transformation
+  files:
+    en: en/prompts/innovation-transformation/agile-devops-transformation-coach.md
+    ja: ja/prompts/innovation-transformation/agile-devops-transformation-coach.md
+    copilot: copilot/prompts/innovation-transformation/agile-devops-transformation-coach.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: healthcare-operations-consultant
+  category: specialized-domains
+  files:
+    en: en/prompts/specialized-domains/healthcare-operations-consultant.md
+    ja: ja/prompts/specialized-domains/healthcare-operations-consultant.md
+    copilot: copilot/prompts/specialized-domains/healthcare-operations-consultant.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: legal-compliance-advisor
+  category: specialized-domains
+  files:
+    en: en/prompts/specialized-domains/legal-compliance-advisor.md
+    ja: ja/prompts/specialized-domains/legal-compliance-advisor.md
+    copilot: copilot/prompts/specialized-domains/legal-compliance-advisor.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: financial-planning-analyst
+  category: specialized-domains
+  files:
+    en: en/prompts/specialized-domains/financial-planning-analyst.md
+    ja: ja/prompts/specialized-domains/financial-planning-analyst.md
+    copilot: copilot/prompts/specialized-domains/financial-planning-analyst.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: cybersecurity-strategy-consultant
+  category: specialized-domains
+  files:
+    en: en/prompts/specialized-domains/cybersecurity-strategy-consultant.md
+    ja: ja/prompts/specialized-domains/cybersecurity-strategy-consultant.md
+    copilot: copilot/prompts/specialized-domains/cybersecurity-strategy-consultant.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: manufacturing-industry-4-consultant
+  category: specialized-domains
+  files:
+    en: en/prompts/specialized-domains/manufacturing-industry-4-consultant.md
+    ja: ja/prompts/specialized-domains/manufacturing-industry-4-consultant.md
+    copilot: copilot/prompts/specialized-domains/manufacturing-industry-4-consultant.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: retail-ecommerce-strategist
+  category: specialized-domains
+  files:
+    en: en/prompts/specialized-domains/retail-ecommerce-strategist.md
+    ja: ja/prompts/specialized-domains/retail-ecommerce-strategist.md
+    copilot: copilot/prompts/specialized-domains/retail-ecommerce-strategist.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: financial-services-banking-consultant
+  category: specialized-domains
+  files:
+    en: en/prompts/specialized-domains/financial-services-banking-consultant.md
+    ja: ja/prompts/specialized-domains/financial-services-banking-consultant.md
+    copilot: copilot/prompts/specialized-domains/financial-services-banking-consultant.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
+- id: enterprise-systems-erp-crm-consultant
+  category: specialized-domains
+  files:
+    en: en/prompts/specialized-domains/enterprise-systems-erp-crm-consultant.md
+    ja: ja/prompts/specialized-domains/enterprise-systems-erp-crm-consultant.md
+    copilot: copilot/prompts/specialized-domains/enterprise-systems-erp-crm-consultant.md
+  status:
+    en: complete
+    ja: planned
+    copilot: complete
 statistics:
-  total_prompts: 78
+  total_prompts: 93
   total_categories: 11
   languages:
     en:
-      completed: 78
+      completed: 93
       in_progress: 0
       planned: 0
       completion_percentage: 100
     ja:
       completed: 1
       in_progress: 0
-      planned: 77
-      completion_percentage: 1.3
+      planned: 92
+      completion_percentage: 1.1
     copilot:
-      completed: 0
+      completed: 93
       in_progress: 0
-      planned: 78
-      completion_percentage: 0
+      planned: 0
+      completion_percentage: 100
   overall:
-    total_prompts_all_languages: 234
-    completed: 79
-    completion_percentage: 33.8
-
+    total_prompts_all_languages: 279
+    completed: 187
+    completion_percentage: 67.0

@@ -1,195 +1,116 @@
-# Ouranos Agentic Library - Microsoft Copilot Agent Edition
+# Copilot-Optimized Prompts
 
-**Optimized Dialogue-based Agentic AI Prompt Templates (8000 Character Limit)**
+This directory contains prompts optimized for **Microsoft Copilot Agent Builder**.
 
-[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/nahisaho/ouranos-agentic-library)
-[![Optimized for](https://img.shields.io/badge/Optimized_for-Microsoft_Copilot-blue.svg)](https://copilot.microsoft.com/)
-
-> **Other Versions**: [English (Full)](../en/README.md) | [日本語 (完全版)](../ja/README.md)
-
-## 📖 Overview
-
-This is a **Microsoft Copilot Agent optimized version** of Ouranos Agentic Library. All prompts are condensed to **8000 characters or less** while maintaining core functionality and dialogue structure.
-
-### Key Features
-
-- 📏 **Character Limit Compliant**: All prompts ≤ 8000 characters
-- 🎯 **Copilot Optimized**: Tailored for Microsoft Copilot Agent constraints
-- 🧠 **Core Knowledge Retained**: Essential frameworks and expertise preserved
-- 📝 **5-Stage Dialogue**: Complete dialogue flow maintained
-- 🔍 **44 Templates**: Full category coverage in compact format
-
-### What's Different from Full Version?
-
-| Aspect | Full Version (en/ja) | Copilot Edition |
-|--------|---------------------|-----------------|
-| **Character Limit** | No limit (10k-15k chars) | ≤ 8000 characters |
-| **Frameworks** | 4-8 frameworks detailed | 2-3 core frameworks |
-| **Examples** | Multiple detailed examples | 1-2 concise examples |
-| **Explanations** | Comprehensive | Essential only |
-| **Best Practices** | Extensive | Key points only |
-
-## 🚀 Quick Start
-
-### Using with Microsoft Copilot
-
-1. **Select Template**: Choose from `prompts/` directory
-2. **Verify Character Count**: Check YAML frontmatter `character_count`
-3. **Copy to Copilot**: Paste entire content into Microsoft Copilot
-4. **Start Dialogue**: Engage in structured conversation
-5. **Generate Output**: Receive optimized meta-prompt
-
-### Example
-
-```bash
-# Clone repository
-git clone https://github.com/nahisaho/ouranos-agentic-library.git
-cd ouranos-agentic-library/copilot
-
-# View optimized prompt
-cat prompts/general/meta-prompt-generator.md
-
-# Check character count
-grep "character_count:" prompts/general/meta-prompt-generator.md
-```
-
-## 📂 Directory Structure
+## 📂 Structure
 
 ```
 copilot/
-├── README.md                 # This file
-├── manifest.yml              # Metadata with character counts
-├── prompts/                  # Optimized templates (44 prompts, all ≤8000 chars)
-│   ├── general/              # General (1)
-│   ├── business-management/  # Business & Management (8)
-│   ├── design-development/   # Design & Development (8)
-│   ├── hr-organization/      # HR & Organization (5)
-│   ├── education/            # Education (4)
-│   ├── research/             # Research (3)
-│   ├── document-creation/    # Document Creation (3)
-│   ├── social-policy/        # Social & Policy (3)
-│   ├── communication/        # Communication (3)
-│   ├── innovation-transformation/ # Innovation & Transformation (3)
-│   └── specialized-domains/  # Specialized Domains (3)
-└── docs/
-    ├── copilot-usage-guide.md      # Copilot-specific usage guide
-    └── character-limit-guide.md    # Character optimization guidelines
+├── prompts/              # Copilot-optimized prompts (≤16K chars)
+│   ├── general/          # 1 prompt
+│   ├── business-management/  # 20 prompts
+│   ├── design-development/   # 20 prompts
+│   ├── hr-organization/      # 11 prompts
+│   ├── education/            # 8 prompts
+│   ├── research/             # 5 prompts
+│   ├── document-creation/    # 3 prompts
+│   ├── social-policy/        # 6 prompts
+│   ├── communication/        # 6 prompts
+│   ├── innovation-transformation/ # 5 prompts
+│   └── specialized-domains/  # 8 prompts
+└── rag/                  # RAG support files (unlimited size)
+    └── {category}/{prompt-id}/
+        ├── frameworks.md     # Framework definitions and guidance
+        ├── examples.md       # Usage examples and scenarios
+        └── methodologies.md  # Step-by-step procedures
 ```
-
-## 📋 Character Count Summary
-
-All 44 prompts are optimized to stay within the 8000 character limit:
-
-| Category | Prompts | Avg Characters | Max Characters |
-|----------|---------|----------------|----------------|
-| General | 1 | ~7,800 | 7,800 |
-| Business & Management | 8 | ~7,500 | 7,950 |
-| Design & Development | 8 | ~7,600 | 7,980 |
-| HR & Organization | 5 | ~7,400 | 7,850 |
-| Education | 4 | ~7,500 | 7,900 |
-| Research | 3 | ~7,300 | 7,750 |
-| Document Creation | 3 | ~7,200 | 7,650 |
-| Social & Policy | 3 | ~7,400 | 7,800 |
-| Communication | 3 | ~7,500 | 7,900 |
-| Innovation & Transformation | 3 | ~7,600 | 7,950 |
-| Specialized Domains | 3 | ~7,700 | 7,980 |
-
-**All prompts verified ≤ 8000 characters**
 
 ## 🎯 Optimization Strategy
 
-### What We Kept
+### Copilot Prompts (Main Files)
+**Target**: ≤8,000 characters (recommended), ≤16,000 characters (hard limit)
 
-✅ **Essential Elements**:
-- YAML frontmatter with metadata
+**Contents**:
+- YAML metadata (id, category, frameworks, version, RAG references)
 - Role definition (concise)
-- Complete 5-stage dialogue flow
-- 2-3 core frameworks per prompt
-- 1 practical example
-- Output format template
+- Dialogue flow (stage headings, key questions, outputs)
+- Framework names and brief summaries
+- Quick reference section
+- RAG file references
 
-### What We Condensed
+### RAG Files (Support Files)
+**Target**: Unlimited
 
-📉 **Reduced Elements**:
-- Detailed explanations → Essential only
-- Multiple examples → 1-2 examples
-- Extensive best practices → Key points
-- Redundant information → Eliminated
-- Long quotes → Summarized
+**Contents**:
+- **frameworks.md**: Full framework definitions, components, application guidance, best practices
+- **examples.md**: Complete usage scenarios, dialogue walkthroughs, domain-specific examples
+- **methodologies.md**: Step-by-step procedures, quality checklists, troubleshooting guides
 
-### Character Count Metadata
+## 📊 Conversion Stats
 
-Each prompt includes:
+- **Total Prompts**: 93
+- **Categories**: 11
+- **RAG Files**: 279 (93 prompts × 3 files each)
+- **Conversion Date**: 2025-11-24
+- **Source**: `/prompts/en/prompts/`
 
-```yaml
-character_count: 7850
-optimized_for: microsoft-copilot
-full_version_en: ../en/prompts/category/filename.md
-full_version_ja: ../ja/prompts/category/filename.md
+### Character Count Distribution
+
+| Range | Count | Percentage |
+|-------|-------|------------|
+| ≤8,000 chars | 20 | 21.5% |
+| 8,001-16,000 | 71 | 76.3% |
+| >16,000 chars | 2 | 2.2% |
+
+**Note**: Microsoft Copilot Agent Builder supports up to 16KB (~16,000 chars). Only 2 prompts exceed this and may require manual optimization.
+
+## 🚀 Usage with Microsoft Copilot
+
+### 1. Import Prompt
+Copy the content of a Copilot prompt file (e.g., `prompts/general/meta-prompt-generator.md`)
+
+### 2. Configure RAG Files
+Upload the corresponding RAG files from `rag/{category}/{prompt-id}/`:
+- `frameworks.md`
+- `examples.md`
+- `methodologies.md`
+
+### 3. Reference RAG in Instructions
+The prompt will automatically reference RAG files:
+```markdown
+**Framework Details**: See `rag/{category}/{prompt-id}/frameworks.md`
+**Usage Examples**: See `rag/{category}/{prompt-id}/examples.md`
+**Step-by-Step**: See `rag/{category}/{prompt-id}/methodologies.md`
 ```
 
-## 🔧 Best Practices for Copilot
+## 🔧 Development
 
-### Tips for Optimal Results
+### Converting Additional Prompts
 
-1. **Copy Entire Prompt**: Include YAML frontmatter and all sections
-2. **Start Fresh Session**: Use new Copilot session for each template
-3. **Follow Dialogue Flow**: Progress through all 5 stages
-4. **Provide Context**: Be specific in your responses
-5. **Reference Full Version**: For deeper understanding, check full versions
+```bash
+python3 scripts/convert_to_copilot.py
+```
 
-### Common Issues
+### Validating Character Counts
 
-| Issue | Solution |
-|-------|----------|
-| Truncated output | Ensure full prompt was pasted |
-| Missing frameworks | Check that frontmatter was included |
-| Unclear responses | Provide more specific context in Stage 1 |
-| Character limit error | Verify prompt character_count ≤ 8000 |
+```bash
+find prompts/copilot/prompts -name "*.md" -exec wc -c {} + | sort -rn
+```
 
-## 📚 Documentation
+## 📝 Versioning
 
-- [Copilot Usage Guide](docs/copilot-usage-guide.md) - Detailed Copilot instructions
-- [Character Limit Guide](docs/character-limit-guide.md) - Optimization techniques
-- [Full Version (English)](../en/README.md) - Complete prompts in English
-- [Full Version (Japanese)](../ja/README.md) - Complete prompts in Japanese
+- **Version**: 1.0.0
+- **Last Updated**: 2025-11-24
+- **Status**: Production Ready
+- **Compatibility**: Microsoft Copilot Agent Builder
 
-## 📄 License
+## 📖 Related Documentation
 
-Licensed under [Creative Commons Attribution-NonCommercial 4.0 International License](../LICENSE).
-
-**Summary:**
-- ✅ Non-commercial use, modification, and redistribution allowed
-- ✅ Attribution required
-- ❌ Commercial use prohibited
-
-## 🤝 Contributing
-
-To contribute optimized prompts:
-
-1. Ensure character count ≤ 8000
-2. Maintain 5-stage dialogue structure
-3. Preserve core frameworks (2-3 minimum)
-4. Include character_count in YAML frontmatter
-5. Test with Microsoft Copilot
-
-See [Full Contribution Guidelines](../en/docs/contribution.md).
-
-## 📞 Contact
-
-Questions or suggestions? Create an [Issue](https://github.com/nahisaho/ouranos-agentic-library/issues).
-
-## ⚠️ Important Notes
-
-- **Character Counting**: Uses UTF-8 character count (including spaces, newlines, YAML)
-- **Copilot Versions**: Optimized for Microsoft Copilot as of November 2025
-- **Updates**: Check manifest.yml for latest character counts
-- **Full Content**: For comprehensive content, use [English](../en/) or [Japanese](../ja/) versions
+- [Main README](../../README.md)
+- [Conversion Strategy](../../storage/specs/copilot-conversion-strategy.md)
+- [Converter Prompt](../../storage/specs/copilot-converter-prompt.md)
+- [English Prompts Source](../en/prompts/)
 
 ---
 
-**Version**: 1.0.0  
-**Last Updated**: 2025-11-19  
-**Status**: In Development (Optimization in Progress)  
-**Character Limit**: 8000 characters maximum
+**Note**: These prompts are optimized for Microsoft Copilot Agent Builder. For other AI assistants, use the original English prompts in `/prompts/en/`.
